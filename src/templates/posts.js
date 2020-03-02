@@ -30,8 +30,6 @@ export default ({ data }) => {
         }) 
     }, [edges]);
 
-    console.log('sdfds', relatedPostList)
-
     return (
         <Layout>
             <SEO
