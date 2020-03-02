@@ -31,8 +31,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         const postId = node.frontmatter.id;
         const relatedPostIds = getRelatedPostIds(postId);
 
-        console.log('sdfsd', relatedPostIds);
-
         createPage({
             path: `/posts/${postId}`,
             component: postsTemplateComponent,
