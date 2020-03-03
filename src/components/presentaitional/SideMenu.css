@@ -1,0 +1,10 @@
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 100%;
+}
+
+.side-menu.opened {
+    left: 0;
+    right: auto;
+}

@@ -1,6 +1,6 @@
-const createCategoryNode = (title = '', postIds = [], children = []) => {
+const createCategoryNode = (name = '', postIds = [], children = []) => {
     return {
-        title,
+        name,
         postIds,
         children
     };
@@ -9,7 +9,7 @@ const createCategoryNode = (title = '', postIds = [], children = []) => {
 const getCategoryNodeByPostId = (CategoryNode, postId) => {
     let result;
     
-    if (CategoryNode.postIds.findIndex(id => id == postId) !== -1) {
+    if (CategoryNode.postIds.findIndex(id => id === postId) !== -1) {
         result = CategoryNode;
     }
 

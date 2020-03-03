@@ -36,7 +36,13 @@ export default () => {
         return anchorList.map((anchor) => {
             const { title, href, depth, top } = anchor;
             return (
-                <Anchor title={title} href={href} depth={depth} isSelected={isAnchorSelected(top , scrollTop)}/>
+                <Anchor
+                    title={title}
+                    href={href}
+                    depth={depth}
+                    isSelected={isAnchorSelected(top , scrollTop)}
+                    key={`post-anchor-${title}`}
+                />
             );
         });
     };
@@ -45,7 +51,7 @@ export default () => {
         // TODO: unmount 될 때 event 취소하기
         // TODO: throttling 걸기
         window.addEventListener('scroll', scrollHandler);
-    }, []);
+    }, [scrollHandler]);
 
     useEffect(() => {
         const anchorElements = document.getElementsByClassName('markdown-header-auto-link');

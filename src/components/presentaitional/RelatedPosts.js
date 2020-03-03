@@ -11,7 +11,9 @@ export default ({ relatedPostList }) => {
             {
                 relatedPostList.map((post) => {
                     return (
-                        <Link to={getPathOfPost(post.id)}>{post.title}</Link>
+                        <Link to={getPathOfPost(post.id)} key={`related-post-${post.id}`}>
+                            {post.title}
+                        </Link>
                     );
                 }) 
             }

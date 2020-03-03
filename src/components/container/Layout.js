@@ -1,27 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { useStaticQuery, graphql } from "gatsby"
-
-import TopFixedHeader from '../presentaitional/TopFixedHeader';
 import PageWrapper from '../presentaitional/PageWrapper';
+import MenuButton from '../presentaitional/MenuButton';
+import SideMenu from '../presentaitional/SideMenu';
 
 export default ({ children }) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `);
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
 
     return (
         <>
-            <TopFixedHeader title={data.site.siteMetadata.title} />
             <PageWrapper>
                 {children}
             </PageWrapper>
+            <MenuButton clickHandler={() => setIsMenuOpened(!isMenuOpened)}/>
+            <SideMenu isMenuOpened={isMenuOpened}/>
         </>
     );
 };
