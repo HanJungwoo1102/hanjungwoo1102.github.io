@@ -58,14 +58,12 @@
 /static/9a0e04de36fd43721e48ba163233da95/47498/aaaa.jpg 1200w,
 /static/9a0e04de36fd43721e48ba163233da95/ec6c5/aaaa.jpg 1280w" src="/static/9a0e04de36fd43721e48ba163233da95/14b42/aaaa.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><h1>Gatsby 로 개인 blog 만들기 (1)</h1><h2>February 19, 2020</h2><div class="blog-post-content"><p>여러 블로그 플랫폼에 안주하지 못하고 돌아다니던 중 React 로 github 블로그를 만들 수 있다는 소문을 듣게 되었다. 그래서 찾아보다 Gatsby 를 알게 됐다.</p>
 <h2 id="install-gatsby" style="position:relative;"><a href="#install-gatsby" aria-label="install gatsby permalink" class="markdown-header-auto-link before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Gatsby</h2>
-<pre><code>    npm install gatsby
-</code></pre>
+<pre class="grvsc-container dark-default-dark" data-language="" data-index="0"><code class="grvsc-code"><span class="grvsc-line">    npm install gatsby</span></code></pre>
 <h2 id="gatsby-new" style="position:relative;"><a href="#gatsby-new" aria-label="gatsby new permalink" class="markdown-header-auto-link before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gatsby new</h2>
 <h3 id="sdfds" style="position:relative;"><a href="#sdfds" aria-label="sdfds permalink" class="markdown-header-auto-link before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sdfds</h3>
 <h4 id="sdffsd" style="position:relative;"><a href="#sdffsd" aria-label="sdffsd permalink" class="markdown-header-auto-link before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sdffsd</h4>
 <h6 id="sd" style="position:relative;"><a href="#sd" aria-label="sd permalink" class="markdown-header-auto-link before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sd</h6>
-<pre><code>    gatsby new blog h
-</code></pre>
+<pre class="grvsc-container dark-default-dark" data-language="" data-index="1"><code class="grvsc-code"><span class="grvsc-line">    gatsby new blog h</span></code></pre>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 730px;"
@@ -96,4 +94,42 @@
         loading="lazy"
       />
   </a>
-    </span></p></div></div></div><div class="fixed-right-side-bar"><div></div><div><div>RelatedPost</div><a aria-current="page" class="" href="/posts/1">Gatsby 로 개인 blog 만들기 (1)</a></div></div></div><button class="menu-button">menu</button><div class="side-menu"><div>HanJungwoo</div><div><div>Category</div><div><a href="/categories/Web">Web</a><div><a href="/categories/Gatsby Blog">Gatsby Blog</a></div></div><div><a href="/categories/Algorithm">Algorithm</a></div><div><a href="/categories/Personal">Personal</a></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/1";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-7a8869cb0e9854eb93bb.js"],"component---src-templates-posts-js":["/component---src-templates-posts-js-6d1a2de44f86f31ce7bf.js"],"component---src-templates-categories-js":["/component---src-templates-categories-js-7c6c38fd40037eaa50b9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2175e4317aafca900602.js"]};/*]]>*/</script><script src="/component---src-templates-posts-js-6d1a2de44f86f31ce7bf.js" async=""></script><script src="/commons-6634c489c9318c2273cc.js" async=""></script><script src="/styles-ff5056db309a709f29a4.js" async=""></script><script src="/app-7a8869cb0e9854eb93bb.js" async=""></script><script src="/webpack-runtime-b12b8aae40b80883401a.js" async=""></script></body></html>
+    </span></p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+</style></div></div></div><div class="fixed-right-side-bar"><div></div><div><div>RelatedPost</div><a aria-current="page" class="" href="/posts/1">Gatsby 로 개인 blog 만들기 (1)</a></div></div></div><button class="menu-button">menu</button><div class="side-menu"><div>HanJungwoo</div><div><div>Category</div><div><a href="/categories/Web">Web</a><div><a href="/categories/Gatsby Blog">Gatsby Blog</a></div></div><div><a href="/categories/Algorithm">Algorithm</a></div><div><a href="/categories/Personal">Personal</a></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/1";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-7a8869cb0e9854eb93bb.js"],"component---src-templates-posts-js":["/component---src-templates-posts-js-6d1a2de44f86f31ce7bf.js"],"component---src-templates-categories-js":["/component---src-templates-categories-js-7c6c38fd40037eaa50b9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2175e4317aafca900602.js"]};/*]]>*/</script><script src="/component---src-templates-posts-js-6d1a2de44f86f31ce7bf.js" async=""></script><script src="/commons-6634c489c9318c2273cc.js" async=""></script><script src="/styles-ff5056db309a709f29a4.js" async=""></script><script src="/app-7a8869cb0e9854eb93bb.js" async=""></script><script src="/webpack-runtime-b12b8aae40b80883401a.js" async=""></script></body></html>
