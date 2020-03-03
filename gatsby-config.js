@@ -48,6 +48,12 @@ module.exports = {
                             className: 'markdown-header-auto-link',
                         }
                     },
+                    {
+                        resolve: `gatsby-remark-vscode`,
+                        options: {
+                            theme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
+                        },
+                    },
                 ]
             }
         },
