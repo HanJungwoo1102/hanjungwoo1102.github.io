@@ -4,12 +4,15 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const host = 'hanjungwoo1102.github.io';
+
 module.exports = {
     /* Your site config here */
     siteMetadata: {
         title: 'HanJungwoo',
         description: 'Han Jungwoo Blog',
         author: '@HanJungwoo',
+        siteUrl: `https://${host}`,
     },
     plugins: [
         {
@@ -62,6 +65,17 @@ module.exports = {
         },
         {
             resolve: 'gatsby-plugin-smoothscroll',
+        },
+        {
+            resolve: 'gatsby-plugin-sitemap',
+        },
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: `https://${host}`,
+                sitemap: `https://${host}/sitemap.xml`,
+                policy: [{ userAgent: '*', allow: '/' }],
+            }
         },
     ]
 };
