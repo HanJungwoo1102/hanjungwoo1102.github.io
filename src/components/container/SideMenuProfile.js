@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import ProfileImg from './ProfileImg';
 
 export default () => {
     const data = useStaticQuery(graphql`
@@ -13,6 +14,9 @@ export default () => {
     `);
 
     return (
-        <div>{data.site.siteMetadata.title}</div>
+        <div>
+            <div>{data.site.siteMetadata.title}</div>
+            <ProfileImg/>
+        </div>
     );
 };
