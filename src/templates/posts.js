@@ -2,7 +2,7 @@ import React, { useMemo } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from '../components/container/Layout';
+import Layout from '../components/presentaitional/Layout';
 import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";

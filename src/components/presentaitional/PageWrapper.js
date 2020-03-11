@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const PageWrapper = styled.main`
     max-width: 730px;
-    padding: 0 20px;
+    padding: 20px;
     margin: 0 auto;
 `;
 
