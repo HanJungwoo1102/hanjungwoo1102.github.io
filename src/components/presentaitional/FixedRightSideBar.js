@@ -1,11 +1,17 @@
 import React from 'react';
 
-import './FixedRightSideBar.css';
+import styled from 'styled-components';
+
+const FixedRightSideBar = styled.aside`
+    position: fixed;
+    right: 0;
+    top: 60px;
+`
 
 export default ({ children }) => {
     return (
-        <div className="fixed-right-side-bar">
+        <FixedRightSideBar>
             {children}
-        </div>
+        </FixedRightSideBar>
     );
 };

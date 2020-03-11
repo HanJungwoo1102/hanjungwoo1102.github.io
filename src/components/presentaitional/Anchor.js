@@ -2,12 +2,24 @@ import React from 'react';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import './Anchor.css';
+import styled from 'styled-components';
+
+const Anchor = styled.div`
+    font-size: 14px;
+
+    ${props => props.isSelected &&
+        'font-weight: 600;'
+    }
+
+    ${props => props.depth &&
+        `margin-left: ${(props.depth - 2) * 15}px;`
+    }
+`;
 
 export default ({ title, href, depth, isSelected }) => {
     return (
-        <div className={`anchor ${isSelected? 'selected' : ''} depth${depth}`} onClick={() => scrollTo(href)}>
+        <Anchor onClick={() => scrollTo(href)} depth={depth} isSelected={isSelected}>
             {title}
-        </div>
+        </Anchor>
     );
 };

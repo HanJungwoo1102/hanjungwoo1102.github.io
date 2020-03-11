@@ -1,9 +1,18 @@
 import React from 'react';
 
-import './MenuButton.css';
+import styled from 'styled-components';
+
+const MenuButton = styled.button`
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+`;
 
 export default ({ clickHandler }) => {
     return (
-        <button className="menu-button" onClick={clickHandler}>menu</button>
+        <MenuButton onClick={clickHandler}>
+            menu
+        </MenuButton>
     );
 };

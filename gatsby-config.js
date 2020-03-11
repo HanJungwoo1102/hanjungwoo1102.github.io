@@ -77,5 +77,8 @@ module.exports = {
                 policy: [{ userAgent: '*', allow: '/' }],
             }
         },
+        {
+            resolve: `gatsby-plugin-styled-components`,
+        },
     ]
 };

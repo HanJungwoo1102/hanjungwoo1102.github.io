@@ -1,11 +1,18 @@
 import React from 'react';
 
-import './PageWrapper.css';
+import styled from 'styled-components';
+
+const PageWrapper = styled.main`
+    max-width: 730px;
+    padding: 0 20px;
+    margin: 0 auto;
+`;
+
 
 export default ({ children }) => {
     return (
-        <div className="page-wrapper">
+        <PageWrapper>
             {children}
-        </div>
+        </PageWrapper>
     );
 };
