@@ -3,6 +3,8 @@ import React, { useCallback } from 'react';
 import Category from '../../datum/category';
 import CategoryNode from '../presentaitional/CategoryNode';
 
+import SideMenuCategoryContainer from '../presentaitional/SideMenuCategoryContainer';
+
 export default () => {
     const getCategoryComponent = useCallback((categoryNode) => {
         return (
@@ -18,13 +20,12 @@ export default () => {
     }, []);
 
     return (
-        <div>
-            <div>Category</div>
+        <SideMenuCategoryContainer>
             {
                 Category.CATEGORY.children.map((categoryNode) => {
                     return getCategoryComponent(categoryNode);
                 })
             }
-        </div>
+        </SideMenuCategoryContainer>
     );
 };

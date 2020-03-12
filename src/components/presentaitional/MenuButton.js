@@ -16,6 +16,7 @@ const MenuButton = styled.button`
     justify-content: center;
     align-items: center;
     border: 0;
+    outline: 0;
 
     ${
         getMediaQueryOfOnlyMobile(

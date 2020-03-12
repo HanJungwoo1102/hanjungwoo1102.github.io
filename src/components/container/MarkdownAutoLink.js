@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 import Anchor from '../presentaitional/Anchor';
+import AnchorContainer from '../presentaitional/AnchorContainer';
 
 const isAnchorSelected = (anchorTop, scrollTop) =>{
     // 현재 스크롤된 위치에서 화면 중앙에 anchor top 이 왔을 경우
@@ -61,8 +62,9 @@ export default () => {
     }, []);
 
     return (
-        <div>
+        <AnchorContainer>
             {getAnchorItems(anchors)}
-        </div>
+
+        </AnchorContainer>
     );
 };

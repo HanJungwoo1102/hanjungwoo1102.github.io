@@ -4,7 +4,7 @@ import PageWrapper from './PageWrapper';
 import MenuButton from './MenuButton';
 import SideMenu from './SideMenu';
 
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import * as COLOR from '../../constants/style/color';
 
