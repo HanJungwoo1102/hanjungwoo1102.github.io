@@ -67,6 +67,11 @@ const SEO = ({ description, lang, meta, title }) => {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    // for google search console 소유권 확인
+                    name: 'google-site-verification',
+                    content: 'o8wd6v_PXcjz7y3TGrG8QCDcBXQw-bYGHj81cHTsGyE',
+                },
             ].concat(meta)}
         />
     );
