@@ -9,11 +9,10 @@ import { createGlobalStyle } from 'styled-components';
 import * as COLOR from '../../constants/style/color';
 
 const GlobalStyle = createGlobalStyle`
-    * { margin: 0; padding: 0; }
-    
     a:link, a:visited, a:active { text-decoration:none; color:${COLOR.TEXT1}; }
 
     body {
+        margin: 0;
         color: ${COLOR.TEXT1};
         background-color: ${COLOR.BACKGROUND1};
     }

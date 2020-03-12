@@ -36,6 +36,7 @@ export default ({ data }) => {
                 title={frontmatter.title}
                 description={excerpt}
             />
+
             <div className="blog-post-container">
                 <div className="blog-post">
                     {
@@ -50,6 +51,7 @@ export default ({ data }) => {
                     />
                 </div>
             </div>
+
             <FixedRightSideBar>
                 <MarkdownAutoLink />
                 <RelatedPosts relatedPostList={relatedPostList}/>
