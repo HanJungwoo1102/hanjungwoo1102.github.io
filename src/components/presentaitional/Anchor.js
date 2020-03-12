@@ -15,7 +15,7 @@ const Anchor = styled.div`
     }
 
     ${props => props.depth &&
-        `margin-left: ${(props.depth - 2) * 15}px;`
+        `margin-left: ${(props.depth - 1) * 15}px;`
     }
 `;
 
