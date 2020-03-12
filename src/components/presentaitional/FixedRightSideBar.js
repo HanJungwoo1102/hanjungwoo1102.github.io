@@ -9,7 +9,7 @@ const FixedRightSideBar = styled.aside`
     background-color: ${BACKGROUND2};
     position: fixed;
     right: 20px;
-    top: 60px;
+    top: 20px;
     padding: 20px;
 
     ${
