@@ -28,7 +28,10 @@ export default ({ children }) => {
             <PageWrapper>
                 {children}
             </PageWrapper>
-            <MenuButton clickHandler={() => setIsMenuOpened(!isMenuOpened)}/>
+            <MenuButton
+                isMenuOpened={isMenuOpened}
+                clickHandler={() => setIsMenuOpened(!isMenuOpened)}
+            />
             <SideMenu isMenuOpened={isMenuOpened}/>
         </>
     );

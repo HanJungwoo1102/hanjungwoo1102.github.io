@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-import DefaultPostImg from '../container/DefaultPostImg';
+import DefaultPostImg from '../presentaitional/DefaultPostImg';
 
 export default ({ id, title, description, imageFluid }) => {
     return (

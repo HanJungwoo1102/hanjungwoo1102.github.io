@@ -23,13 +23,6 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: 'resources',
-                path: `${__dirname}/resources/`,
-            },
-        },
-        {
             resolve: 'gatsby-plugin-sharp',
         },
         {
