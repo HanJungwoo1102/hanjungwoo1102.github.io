@@ -4,8 +4,7 @@ import Anchor from '../presentaitional/Anchor';
 import AnchorContainer from '../presentaitional/AnchorContainer';
 
 const isAnchorSelected = (anchorTop, scrollTop) =>{
-    // 현재 스크롤된 위치에서 화면 중앙에 anchor top 이 왔을 경우
-    return scrollTop + window.innerHeight/2 > anchorTop;
+    return scrollTop > anchorTop;
 };
 
 const filterAnchorDetails = anchors => {
