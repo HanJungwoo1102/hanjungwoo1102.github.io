@@ -21,6 +21,7 @@ export default ({ data }) => {
                         <PostPreview
                             id={node.frontmatter.id}
                             title={node.frontmatter.title}
+                            date={node.frontmatter.date}
                             description={node.excerpt}
                             key={node.frontmatter.id}
                             imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
