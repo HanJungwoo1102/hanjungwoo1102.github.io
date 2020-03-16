@@ -17,15 +17,8 @@ const MenuButton = styled.button`
     align-items: center;
     border: 0;
     outline: 0;
-
-    ${
-        getMediaQueryOfOnlyMobile(
-            `
-            bottom: 20px;
-            right: 20px;
-            `
-        )
-    }
+    bottom: 20px;
+    right: 20px;
 
     ${
         getMediaQueryOfOnlyPc(

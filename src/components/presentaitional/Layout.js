@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import PageWrapper from './PageWrapper';
 import MenuButton from './MenuButton';
 import SideMenu from './SideMenu';
 
@@ -24,9 +23,7 @@ export default ({ children }) => {
     return (
         <>
             <GlobalStyle/>
-            <PageWrapper>
-                {children}
-            </PageWrapper>
+            { children }
             <MenuButton
                 isMenuOpened={isMenuOpened}
                 clickHandler={() => setIsMenuOpened(!isMenuOpened)}

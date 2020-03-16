@@ -7,6 +7,7 @@ import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
 import RelatedPosts from "../components/presentaitional/RelatedPosts";
+import CenteredContentsWrapper from '../components/presentaitional/CenteredContentsWrapper';
 
 export default ({ data }) => {
     const {
@@ -43,14 +44,16 @@ export default ({ data }) => {
                         frontmatter.image &&
                         <Img fluid={frontmatter.image.childImageSharp.fluid} />
                     }
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
-                    <div
-                        className="blog-post-content"
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
                 </div>
             </div>
+            <CenteredContentsWrapper>
+                <h1>{frontmatter.title}</h1>
+                <h2>{frontmatter.date}</h2>
+                <div
+                    className="blog-post-content"
+                    dangerouslySetInnerHTML={{ __html: html }}
+                    />
+            </CenteredContentsWrapper>
 
             <FixedRightSideBar>
                 <MarkdownAutoLink />
