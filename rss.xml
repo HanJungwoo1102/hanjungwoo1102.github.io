@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HanJungwoo]]></title><description><![CDATA[Han Jungwoo Blog]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 17 Mar 2020 08:46:17 GMT</lastBuildDate><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (1)]]></title><description><![CDATA[여러 블로그 플랫폼에 안주하지 못하고 돌아다니던 중 React 로 github 블로그를 만들 수 있다는 소문을 듣게 되었다. 그래서 찾아보다 Gatsby 를 알게 됐다. Install Gatsby gatsby new sdfds sdffsd sd]]></description><link>https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</guid><pubDate>Wed, 19 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러 블로그 플랫폼에 안주하지 못하고 돌아다니던 중 React 로 github 블로그를 만들 수 있다는 소문을 듣게 되었다. 그래서 찾아보다 Gatsby 를 알게 됐다.&lt;/p&gt;
+&lt;h2 id=&quot;install-gatsby&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#install-gatsby&quot; aria-label=&quot;install gatsby permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install Gatsby&lt;/h2&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;    npm install gatsby&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;gatsby-new&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#gatsby-new&quot; aria-label=&quot;gatsby new permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;gatsby new&lt;/h2&gt;
+&lt;h3 id=&quot;sdfds&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sdfds&quot; aria-label=&quot;sdfds permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;sdfds&lt;/h3&gt;
+&lt;h4 id=&quot;sdffsd&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sdffsd&quot; aria-label=&quot;sdffsd permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;sdffsd&lt;/h4&gt;
+&lt;h6 id=&quot;sd&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sd&quot; aria-label=&quot;sd permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;sd&lt;/h6&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;    gatsby new blog h&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 730px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9a0e04de36fd43721e48ba163233da95/eea4a/aaaa.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.8125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABU2dsrtJxF//EABkQAAIDAQAAAAAAAAAAAAAAAAABAxMhEv/aAAgBAQABBQJSMtLGaadM/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAACH/2gAIAQIBAT8BV//EABgQAAMBAQAAAAAAAAAAAAAAABARMQEh/9oACAEBAAY/AqKHq6P/xAAbEAACAwADAAAAAAAAAAAAAAAAAREhQTFxof/aAAgBAQABPyFDQmW+jm5CcK2uhxpgk0PBSj//2gAMAwEAAgADAAAAEJwf/8QAGBEAAgMAAAAAAAAAAAAAAAAAAFEBESH/2gAIAQMBAT8QikYj/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQBRcf/aAAgBAgEBPxBXbq//xAAdEAEAAgEFAQAAAAAAAAAAAAABABEhMUFRcdHh/9oACAEBAAE/EBAWeIfqLh+E0MoOHs1L4xQO0PkM3cZG/Z//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;sss&quot;
+        title=&quot;sss&quot;
+        src=&quot;/static/9a0e04de36fd43721e48ba163233da95/1a144/aaaa.jpg&quot;
+        srcset=&quot;/static/9a0e04de36fd43721e48ba163233da95/17a7e/aaaa.jpg 183w,
+/static/9a0e04de36fd43721e48ba163233da95/60097/aaaa.jpg 365w,
+/static/9a0e04de36fd43721e48ba163233da95/1a144/aaaa.jpg 730w,
+/static/9a0e04de36fd43721e48ba163233da95/ab233/aaaa.jpg 1095w,
+/static/9a0e04de36fd43721e48ba163233da95/eea4a/aaaa.jpg 1280w&quot;
+        sizes=&quot;(max-width: 730px) 100vw, 730px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[My first blog post2]]></title><description><![CDATA[1. 마크다운에 관하여 1.1. 마크다운이란? Markdown은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML…]]></description><link>https://hanjungwoo1102.github.io/2-b/b/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/2-b/b/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-마크다운에-관하여&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC&quot; aria-label=&quot;1 마크다운에 관하여 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 마크다운에 관하여&lt;/h1&gt;
+&lt;h2 id=&quot;11-마크다운이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#11-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;11 마크다운이란 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.1. 마크다운이란?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://whatismarkdown.com/&quot;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML로 변환이 가능하다. 특수기호와 문자를 이용한 매우 간단한 구조의 문법을 사용하여 웹에서도 보다 빠르게 컨텐츠를 작성하고 보다 직관적으로 인식할 수 있다.
+마크다운이 최근 각광받기 시작한 이유는 깃헙(&lt;a href=&quot;https://github.com&quot;&gt;https://github.com&lt;/a&gt;) 덕분이다. 깃헙의 저장소Repository에 관한 정보를 기록하는 README.md는 깃헙을 사용하는 사람이라면 누구나 가장 먼저 접하게 되는 마크다운 문서였다. 마크다운을 통해서 설치방법, 소스코드 설명, 이슈 등을 간단하게 기록하고 가독성을 높일 수 있다는 강점이 부각되면서 점점 여러 곳으로 퍼져가게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;12-마크다운의-장-단점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#12-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%9D%98-%EC%9E%A5-%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;12 마크다운의 장 단점 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.2. 마크다운의 장-단점&lt;/h2&gt;
+&lt;h3 id=&quot;121-장점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#121-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;121 장점 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.2.1. 장점&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;1. 간결하다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;2. 별도의 도구없이 작성가능하다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;3. 다양한 형태로 변환이 가능하다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;3. 텍스트(Text)로 저장되기 때문에 용량이 적어 보관이 용이하다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;4. 텍스트파일이기 때문에 버전관리시스템을 이용하여 변경이력을 관리할 수 있다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;5. 지원하는 프로그램과 플랫폼이 다양하다.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;122-단점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#122-%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;122 단점 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.2.2. 단점&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;1. 표준이 없다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;2. 표준이 없기 때문에 도구에 따라서 변환방식이나 생성물이 다르다.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;3. 모든 HTML 마크업을 대신하지 못한다.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;2-마크다운-사용법문법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%AC%B8%EB%B2%95&quot; aria-label=&quot;2 마크다운 사용법문법 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 마크다운 사용법(문법)&lt;/h1&gt;
+&lt;h2 id=&quot;21-헤더headers&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#21-%ED%97%A4%EB%8D%94headers&quot; aria-label=&quot;21 헤더headers permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.1. 헤더Headers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;큰제목: 문서 제목&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;This is an H1&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;=============&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;this-is-an-h1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-an-h1&quot; aria-label=&quot;this is an h1 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is an H1&lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;작은제목: 문서 부제목&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;This is an H2&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;-------------&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;this-is-an-h2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-an-h2&quot; aria-label=&quot;this is an h2 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is an H2&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;글머리: 1~6까지만 지원&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;4&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;# This is a H1&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;## This is a H2&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;### This is a H3&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;#### This is a H4&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;##### This is a H5&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;###### This is a H6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;this-is-a-h1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h1&quot; aria-label=&quot;this is a h1 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H1&lt;/h1&gt;
+&lt;h2 id=&quot;this-is-a-h2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h2&quot; aria-label=&quot;this is a h2 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H2&lt;/h2&gt;
+&lt;h3 id=&quot;this-is-a-h3&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h3&quot; aria-label=&quot;this is a h3 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H3&lt;/h3&gt;
+&lt;h4 id=&quot;this-is-a-h4&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h4&quot; aria-label=&quot;this is a h4 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H4&lt;/h4&gt;
+&lt;h5 id=&quot;this-is-a-h5&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h5&quot; aria-label=&quot;this is a h5 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H5&lt;/h5&gt;
+&lt;h6 id=&quot;this-is-a-h6&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h6&quot; aria-label=&quot;this is a h6 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H6&lt;/h6&gt;
+&lt;p&gt;####### This is a H7(지원하지 않음)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;22-blockquote&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#22-blockquote&quot; aria-label=&quot;22 blockquote permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.2. BlockQuote&lt;/h2&gt;
+&lt;p&gt;이메일에서 사용하는 &lt;code&gt;&gt;&lt;/code&gt; 블럭인용문자를 이용한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;5&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&amp;gt; This is a first blockqute.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;gt;	&amp;gt; This is a second blockqute.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;gt;	&amp;gt;	&amp;gt; This is a third blockqute.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a first blockqute.
+&gt; This is a second blockqute.
+&gt;	&gt; This is a third blockqute.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 안에서는 다른 마크다운 요소를 포함할 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;this-is-a-h3-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#this-is-a-h3-1&quot; aria-label=&quot;this is a h3 1 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;This is a H3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;List&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;6&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;code&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;23-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#23-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;23 목록 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.3. 목록&lt;/h2&gt;
+&lt;h3 id=&quot;●-순서있는-목록번호&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%97%8F-%EC%88%9C%EC%84%9C%EC%9E%88%EB%8A%94-%EB%AA%A9%EB%A1%9D%EB%B2%88%ED%98%B8&quot; aria-label=&quot;● 순서있는 목록번호 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;● 순서있는 목록(번호)&lt;/h3&gt;
+&lt;p&gt;순서있는 목록은 숫자와 점을 사용한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;7&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;1. 첫번째&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;2. 두번째&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;3. 세번째&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;첫번째&lt;/li&gt;
+&lt;li&gt;두번째&lt;/li&gt;
+&lt;li&gt;세번째&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;현재까지는 어떤 번호를 입력해도 순서는 내림차순으로 정의된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;8&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;1. 첫번째&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;3. 세번째&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;2. 두번째&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;첫번째&lt;/li&gt;
+&lt;li&gt;세번째&lt;/li&gt;
+&lt;li&gt;두번째&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;딱히 개선될 것 같지는 않다. 존 그루버가 신경안쓰고 있다고...&lt;/p&gt;
+&lt;h3 id=&quot;●-순서없는-목록글머리-기호-----지원&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%97%8F-%EC%88%9C%EC%84%9C%EC%97%86%EB%8A%94-%EB%AA%A9%EB%A1%9D%EA%B8%80%EB%A8%B8%EB%A6%AC-%EA%B8%B0%ED%98%B8-----%EC%A7%80%EC%9B%90&quot; aria-label=&quot;● 순서없는 목록글머리 기호     지원 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;● 순서없는 목록(글머리 기호: &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt; 지원)&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;9&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;* 빨강&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  * 녹색&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    * 파랑&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;+ 빨강&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  + 녹색&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    + 파랑&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;- 빨강&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  - 녹색&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    - 파랑&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;빨강&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;녹색&lt;/li&gt;
+&lt;li&gt;파랑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;빨강&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;녹색&lt;/li&gt;
+&lt;li&gt;파랑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;빨강&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;녹색&lt;/li&gt;
+&lt;li&gt;파랑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;혼합해서 사용하는 것도 가능하다(내가 선호하는 방식)&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;10&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;* 1단계&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  - 2단계&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    + 3단계&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;      + 4단계&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1단계&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2단계&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3단계&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4단계&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;24-코드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#24-%EC%BD%94%EB%93%9C&quot; aria-label=&quot;24 코드 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.4. 코드&lt;/h2&gt;
+&lt;p&gt;4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.&lt;/p&gt;
+&lt;h3 id=&quot;241-들여쓰기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#241-%EB%93%A4%EC%97%AC%EC%93%B0%EA%B8%B0&quot; aria-label=&quot;241 들여쓰기 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.4.1. 들여쓰기&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;11&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;This is a normal paragraph:&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    This is a code block.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    &lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;end code block.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;실제로 적용해보면,&lt;/p&gt;
+&lt;p&gt;적용예:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;12&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;This is a code block.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end code block.&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;한줄 띄어쓰지 않으면 인식이 제대로 안되는 문제가 발생합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;13&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;This is a normal paragraph:&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    This is a code block.&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;end code block.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;적용예:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is a normal paragraph:
+This is a code block.
+end code block.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;241-코드블럭&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#241-%EC%BD%94%EB%93%9C%EB%B8%94%EB%9F%AD&quot; aria-label=&quot;241 코드블럭 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.4.1. 코드블럭&lt;/h3&gt;
+&lt;p&gt;코드블럭은 다음과 같이 2가지 방식을 사용할 수 있습니다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#x3C;pre&gt;&amp;#x3C;code&gt;{code}&amp;#x3C;/code&gt;&amp;#x3C;/pre&gt;&lt;/code&gt; 이용방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;14&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;public class BootSpringBootApplication {&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  public static void main(String[] args) {&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    System.out.println(&amp;quot;Hello, Honeymon&amp;quot;);&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  }&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;
+&lt;code&gt;
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, Honeymon&quot;);
+  }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;코드블럭코드(&quot;`&lt;code&gt;&lt;/code&gt;&quot;) 을 이용하는 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;
+&lt;code&gt;
+```
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, Honeymon&quot;);
+  }
+}
+```
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;15&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;public class BootSpringBootApplication {&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  public static void main(String[] args) {&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    System.out.println(&amp;quot;Hello, Honeymon&amp;quot;);&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;  }&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;25-수평선-hr&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#25-%EC%88%98%ED%8F%89%EC%84%A0-hr&quot; aria-label=&quot;25 수평선 hr permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.5. 수평선 &lt;code&gt;&amp;#x3C;hr/&gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 &lt;em&gt;페이지 나누기&lt;/em&gt; 용도로 많이 사용한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;16&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;* * *&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;***&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;*****&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;- - -&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;---------------------------------------&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;적용예&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;26-링크&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#26-%EB%A7%81%ED%81%AC&quot; aria-label=&quot;26 링크 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.6. 링크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;참조링크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;17&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;[link keyword][id]&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;[id]: URL &amp;quot;Optional Title here&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;// code&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;Link: [Google][googlelink]&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;[googlelink]: https://google.com &amp;quot;Go google&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Link: &lt;a href=&quot;https://google.com&quot; title=&quot;Go google&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;외부링크&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;18&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;사용문법: [Title](link)&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;적용예: [Google](https://google.com, &amp;quot;google link&amp;quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Link: &lt;a href=&quot;https://google.com,&quot; title=&quot;google link&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자동연결&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;19&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;외부링크: &lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이메일링크: &lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;외부링크: &lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;이메일링크: &lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;27-강조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#27-%EA%B0%95%EC%A1%B0&quot; aria-label=&quot;27 강조 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.7. 강조&lt;/h2&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;20&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;*single asterisks*&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;_single underscores_&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;**double asterisks**&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;__double underscores__&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;~~cancelline~~&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;cancelline&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;문장 중간에 사용할 경우에는 **띄어쓰기** 를 사용하는 것이 좋다.&lt;/code&gt;&lt;br&gt;
+문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;28-이미지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#28-%EC%9D%B4%EB%AF%B8%EC%A7%80&quot; aria-label=&quot;28 이미지 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.8. 이미지&lt;/h2&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;21&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;![Alt text](/path/to/img.jpg)&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;![Alt text](/path/to/img.jpg &amp;quot;Optional title&amp;quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;22&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0)&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 &amp;quot;RubberDuck&amp;quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;사이즈 조절 기능은 없기 때문에 &lt;code&gt;&amp;#x3C;img width=&quot;&quot; height=&quot;&quot;&gt;&amp;#x3C;/img&gt;&lt;/code&gt;를 이용한다.&lt;/p&gt;
+&lt;p&gt;예&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;23&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;img src=&amp;quot;/path/to/img.jpg&amp;quot; width=&amp;quot;450px&amp;quot; height=&amp;quot;300px&amp;quot; title=&amp;quot;px(픽셀) 크기 설정&amp;quot; alt=&amp;quot;RubberDuck&amp;quot;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;img src=&amp;quot;/path/to/img.jpg&amp;quot; width=&amp;quot;40%&amp;quot; height=&amp;quot;30%&amp;quot; title=&amp;quot;px(픽셀) 크기 설정&amp;quot; alt=&amp;quot;RubberDuck&amp;quot;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;24&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;img src=&amp;quot;http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0&amp;quot; width=&amp;quot;450px&amp;quot; height=&amp;quot;300px&amp;quot; title=&amp;quot;px(픽셀) 크기 설정&amp;quot; alt=&amp;quot;RubberDuck&amp;quot;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&amp;lt;img src=&amp;quot;http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0&amp;quot; width=&amp;quot;40%&amp;quot; height=&amp;quot;30%&amp;quot; title=&amp;quot;%(비율) 크기 설정&amp;quot; alt=&amp;quot;RubberDuck&amp;quot;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;29-줄바꿈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#29-%EC%A4%84%EB%B0%94%EA%BF%88&quot; aria-label=&quot;29 줄바꿈 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.9. 줄바꿈&lt;/h2&gt;
+&lt;p&gt;3칸 이상 띄어쓰기(&lt;code&gt;&lt;/code&gt;)를 하면 줄이 바뀐다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;25&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. &lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;이렇게&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.___\\ 띄어쓰기&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;이렇게&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. 이렇게&lt;/li&gt;
+&lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.    &lt;br&gt;
+이렇게&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;3-마크다운-사용기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%82%AC%EC%9A%A9%EA%B8%B0&quot; aria-label=&quot;3 마크다운 사용기 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 마크다운 사용기&lt;/h1&gt;
+&lt;h2 id=&quot;31-위지윅wsywig-에디터&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#31-%EC%9C%84%EC%A7%80%EC%9C%85wsywig-%EC%97%90%EB%94%94%ED%84%B0&quot; aria-label=&quot;31 위지윅wsywig 에디터 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3.1. 위지윅(WSYWIG) 에디터&lt;/h2&gt;
+&lt;p&gt;우리가 흔하게 접하는 웹에서 사용되는 에디터(네이버, 다음, 구글 등)이 대부분 위지윅 에디터에 속하며 기본적으로 HTML을 이용하여 스타일을 적용하여 문장을 꾸미는 형태를 취하게 된다. 그래서 하루패드와 같은 마크다운 에디터의 View 영역의 내용을 복사하여 붙여넣기를 하면 대체적으로 View영역에서 보이는 그대로 복사되는 편이다. 다만, 붙여넣기 이후에 문장들을 수정하려고 할 떄 문제가 되는데, 이는 스타일이 포함된 태그가 수정과정에서 변형되면서 전체적인 영향을 끼치는 탓이다. 티스토리 블로그에서는 쉽지 않고... 워드프레스의 경우에는 마크다운으로 작성된 포스트를 HTML로 변환해주는 기능을 활용하는 것이 좋다.
+결론은, &lt;strong&gt;복사해서 붙여넣기하면 가급적이면 본문은 수정하지 않는 것이 좋다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;32-깃헙github-비트버킷bitbucket과-요비yobi-등&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#32-%EA%B9%83%ED%97%99github-%EB%B9%84%ED%8A%B8%EB%B2%84%ED%82%B7bitbucket%EA%B3%BC-%EC%9A%94%EB%B9%84yobi-%EB%93%B1&quot; aria-label=&quot;32 깃헙github 비트버킷bitbucket과 요비yobi 등 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3.2. 깃헙Github, 비트버킷Bitbucket과 요비Yobi 등&lt;/h2&gt;
+&lt;p&gt;최근 유행하는 협업개발플랫폼의 경우에는 마크다운을 변환하는 컨버터 기능을 기본탑재하고 있기 때문에 마크다운 문법으로 작성한 텍스트를 그대로 복사해서 붙여넣거나 업로드하는 것만으로 마크다운의 적용이 가능하다.&lt;/p&gt;
+&lt;h2 id=&quot;33-ms워드-적용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#33-ms%EC%9B%8C%EB%93%9C-%EC%A0%81%EC%9A%A9&quot; aria-label=&quot;33 ms워드 적용 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3.3. MS워드 적용&lt;/h2&gt;
+&lt;p&gt;View 영역의 항목을 그대로 붙여넣거나 HTML 내보내기 등으로 생성한 파일을 불러오는 형태로 사용가능하다. 적용한 헤더를 워드가 읽어드리면서 목차에 적용하기 때문에 이를 활용하면 목차까지도 손쉽게 적용이 가능해진다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;4-정리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EC%A0%95%EB%A6%AC&quot; aria-label=&quot;4 정리 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 정리&lt;/h1&gt;
+&lt;p&gt;마크다운은 기본문법만 알고있다면 일반 텍스트편집기에서도 손쉽게 작성이 가능한 마크업언어다. 현재 다양한 도구와 플랫폼에서 지원하고 있기 때문에 더욱 손쉽게 스타일적용된 문서를 작성할 수 있어 점점 널리 사용되고 있다.   &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;마크다운을 이해하고 사용하면서 쉽고 빠르게 스타일문서를 작성해보세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;저는 Dropbox 프로를 구매해서 집-랩탑-스마트폰이 각각 연동을 시켜서 사용하고 있습니다. 드랍박스에 저장된 마크다운 문서는 Dropbox 웹서비스 상에서 제공하기 때문에 웹상에서 바로 열람할 수도 있어 링크를 걸어서 다른 사람과 공유하는 형식으로 사용하고 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;링크 예: &lt;a href=&quot;https://www.dropbox.com/s/1e7hbtd0yr0egft/20141021_markdown_use_tip.md?dl=0&quot;&gt;Markdown 설명&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;ps&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ps&quot; aria-label=&quot;ps permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;P.S.&lt;/h1&gt;
+&lt;p&gt;최근에는 &lt;a href=&quot;https://www.notion.so/product&quot;&gt;Notion&lt;/a&gt; 을 조금씩 사용중이다. Notion 에서 작성한 문서는 Atom(&lt;a href=&quot;https://atom.io/&quot;&gt;https://atom.io/&lt;/a&gt;), Visual Studio Code(&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com/&lt;/a&gt;), Notepad++(&lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;https://notepad-plus-plus.org/&lt;/a&gt;)텍스트 편집기에 복붙(복사하고 붙여넣기)하면 마크다운문법으로 작성된 문장이 기입되고 이지윅 에디터를 제공하는 웹에디터에 붙여넣기 하면 거의 완벽한 형태로 복사된다. 그래서 애용중이다.&lt;/p&gt;
+&lt;h2 id=&quot;○-참고문서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%97%8B-%EC%B0%B8%EA%B3%A0%EB%AC%B8%EC%84%9C&quot; aria-label=&quot;○ 참고문서 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;○ 참고문서&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mashable.com/2013/06/24/markdown-tools/&quot;&gt;78 Tools for writing and previewing Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/&quot;&gt;John gruber 마크다운 번역&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nolboo.github.io/blog/2014/03/25/github-flavored-markdown/&quot;&gt;깃허브 취향의 마크다운 번역&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/ihoneymon/ss-40575068&quot;&gt;허니몬의 마크다운 작성법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Notion.so(&lt;a href=&quot;https://www.notion.so/product&quot;&gt;https://www.notion.so/product&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Atom(&lt;a href=&quot;https://atom.io/&quot;&gt;https://atom.io/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Visual Studio Code(&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Notepad++(&lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;https://notepad-plus-plus.org/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+&lt;/style&gt;</content:encoded></item></channel></rss>
