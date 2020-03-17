@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useCallback, useMemo, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -7,7 +7,7 @@ import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
 import RelatedPosts from "../components/presentaitional/RelatedPosts";
-import CenteredContentsWrapper from '../components/presentaitional/CenteredContentsWrapper';
+import PostContainer from "../components/presentaitional/PostContainer";
 
 export default ({ data }) => {
     const {
@@ -20,6 +20,7 @@ export default ({ data }) => {
             edges,
         },
     } = data;
+    const [scrollTop, setScrollTop] = useState(null);
 
     const relatedPostList = useMemo(() => {
         return edges.map((edge) => {
@@ -31,6 +32,17 @@ export default ({ data }) => {
         }) 
     }, [edges]);
 
+    const scrollHandler = useCallback(() => {
+        const newScrollTop = window.scrollY || document.documentElement.scrollTop;
+        setScrollTop(newScrollTop);
+    }, []);
+
+    const isShowContents = scrollTop > 0;
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
+    }, []);
+
     return (
         <Layout>
             <SEO
@@ -38,22 +50,14 @@ export default ({ data }) => {
                 description={excerpt}
             />
 
-            <div className="blog-post-container">
-                <div className="blog-post">
-                    {
-                        frontmatter.image &&
-                        <Img fluid={frontmatter.image.childImageSharp.fluid} />
-                    }
-                </div>
-            </div>
-            <CenteredContentsWrapper>
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <div
-                    className="blog-post-content"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                    />
-            </CenteredContentsWrapper>
+            <PostContainer
+                title={frontmatter.title}
+                date={frontmatter.date}
+                image={frontmatter.image}
+                frontmatter={frontmatter}
+                html={html}
+                isShowContents={isShowContents}
+            />
 
             <FixedRightSideBar>
                 <MarkdownAutoLink />
