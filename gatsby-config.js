@@ -79,5 +79,8 @@ module.exports = {
                 trackingId: "UA-118250676-2",
             },
         },
+        {
+            resolve: 'gatsby-plugin-feed',
+        },
     ]
 };
