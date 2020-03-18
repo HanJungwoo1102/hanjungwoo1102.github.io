@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/presentaitional/Layout";
 import PostPreview from "../components/presentaitional/PostPreview";
 import SEO from "../components/container/Seo";
+import { PostContentsWrapper } from "../components/styled/CenteredContentsWrapper";
 
 export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -15,20 +16,22 @@ export default ({ data }) => {
             />
             hi
     
-            {
-                posts.map(({ node }) => {
-                    return (
-                        <PostPreview
-                            id={node.frontmatter.id}
-                            title={node.frontmatter.title}
-                            date={node.frontmatter.date}
-                            description={node.excerpt}
-                            key={node.frontmatter.id}
-                            imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
-                        />
-                    );
-                })
-            }
+            <PostContentsWrapper>
+                {
+                    posts.map(({ node }) => {
+                        return (
+                            <PostPreview
+                                id={node.frontmatter.id}
+                                title={node.frontmatter.title}
+                                date={node.frontmatter.date}
+                                description={node.excerpt}
+                                key={node.frontmatter.id}
+                                imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
+                            />
+                        );
+                    })
+                }
+            </PostContentsWrapper>
         </Layout>
     );
 };

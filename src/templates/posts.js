@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, useEffect, useState } from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from '../components/presentaitional/Layout';
 import SEO from "../components/container/Seo";
@@ -41,7 +40,14 @@ export default ({ data }) => {
 
     useEffect(() => {
         window.addEventListener('scroll', scrollHandler);
-    }, []);
+    }, [scrollHandler]);
+
+    useEffect(() => {
+        if (isShowContents) {
+            // 한 번 보여지면 계속 보여지게 하기 위해서 이벤트를 없앴다.
+            window.removeEventListener('scroll', scrollHandler);
+        }
+    }, [isShowContents, scrollHandler]);
 
     return (
         <Layout>

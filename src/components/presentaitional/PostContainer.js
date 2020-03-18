@@ -2,7 +2,7 @@ import React from 'react';
 import Img from "gatsby-image"
 import styled from 'styled-components';
 
-import CenteredContentsWrapper from './CenteredContentsWrapper';
+import { PostContentsWrapper } from '../styled/CenteredContentsWrapper';
 
 const BlogPostContainer = styled.div`
     position: relative;
@@ -15,6 +15,10 @@ const BlogPostImageWrapper = styled.div`
     top: 0;
     left: 0;
     overflow: hidden;
+
+    .gatsby-image-wrapper {
+        height: 100%;
+    }
     ${
         props => props.isShowContents &&
         'display:none;'
@@ -54,17 +58,18 @@ export default ({
 }) => {
     return (
         <BlogPostContainer>
-            {
-                image &&
-                <BlogPostImageWrapper isShowContents={isShowContents}>
+            <BlogPostImageWrapper isShowContents={isShowContents}>
+                {
+                    image &&
                     <Img fluid={image.childImageSharp.fluid} />
-                    <BlogPostImageCover>
-                        <h1>{title}</h1>
-                        <h2>{date}</h2>
-                    </BlogPostImageCover>
-                </BlogPostImageWrapper>
-            }
-            <CenteredContentsWrapper>
+                }
+                <BlogPostImageCover>
+                    <h1>{title}</h1>
+                    <h2>{date}</h2>
+                </BlogPostImageCover>
+            </BlogPostImageWrapper>
+
+            <PostContentsWrapper>
                 <BlogPostContentsContainer isShowContents={isShowContents}>
                     <h1>{title}</h1>
                     <h2>{date}</h2>
@@ -72,7 +77,7 @@ export default ({
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </BlogPostContentsContainer>
-            </CenteredContentsWrapper>
+            </PostContentsWrapper>
         </BlogPostContainer>
     );
 };

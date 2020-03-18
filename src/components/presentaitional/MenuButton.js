@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { getMediaQueryOfOnlyPc, getMediaQueryOfOnlyMobile } from '../../constants/style/size';
+import { getMediaQueryOfOnlyPc } from '../../constants/style/size';
 import { BUTTON } from '../../constants/style/color';
 
 const MenuButton = styled.button`
