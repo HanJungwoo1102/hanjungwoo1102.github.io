@@ -9,17 +9,16 @@ import DefaultPostImg from '../presentaitional/DefaultPostImg';
 
 import styled from 'styled-components';
 
-import { BACKGROUND2 } from '../../constants/style/color';
+import { BACKGROUND2, TEXT2 } from '../../constants/style/color';
 
 const PostPreview = styled.div`
     /* background-color: ${BACKGROUND2}; */
     padding: 15px;
     margin-bottom: 15px;
-    max-width: 360px;
 `;
 
 const PostPreviewImage = styled.div`
-
+    width: 100%;
 `;
 
 const PostInformation = styled.div`
@@ -31,10 +30,12 @@ const PostInformation = styled.div`
     }
     .post-preview-date {
         font-size: 11px;
+        color: ${TEXT2};
     }
     .post-preview-description {
         margin-top: 4px;
         font-size: 12px;
+        color: ${TEXT2};
     }
 
 `;

@@ -2,9 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/presentaitional/Layout";
-import PostPreview from "../components/presentaitional/PostPreview";
 import SEO from "../components/container/Seo";
-import { PostContentsWrapper } from "../components/styled/CenteredContentsWrapper";
+import MainRecentPosts from '../components/presentaitional/MainRecentPosts';
 
 export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -16,22 +15,7 @@ export default ({ data }) => {
             />
             hi
     
-            <PostContentsWrapper>
-                {
-                    posts.map(({ node }) => {
-                        return (
-                            <PostPreview
-                                id={node.frontmatter.id}
-                                title={node.frontmatter.title}
-                                date={node.frontmatter.date}
-                                description={node.excerpt}
-                                key={node.frontmatter.id}
-                                imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
-                            />
-                        );
-                    })
-                }
-            </PostContentsWrapper>
+            <MainRecentPosts posts={posts} />
         </Layout>
     );
 };
@@ -53,7 +37,7 @@ export const pageQuery = graphql`
                             }
                         }
                     }
-                    excerpt(pruneLength: 280)
+                    excerpt(pruneLength: 180)
                 }
             }
         }
