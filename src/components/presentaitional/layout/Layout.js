@@ -1,9 +1,9 @@
-import React, { useState } from './node_modules/react';
+import React, { useState } from 'react';
 
 import MenuButton from './MenuButton';
 import SideMenu from './side-menu/SideMenu';
 
-import { createGlobalStyle } from './node_modules/styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import * as COLOR from '../../../constants/style/color';
 

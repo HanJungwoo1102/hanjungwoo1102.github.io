@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../components/layout/presentaitional/Layout';
+import Layout from '../components/presentaitional/layout/Layout';
 import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/common/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";

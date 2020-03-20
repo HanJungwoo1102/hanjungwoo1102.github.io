@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout/presentaitional/Layout";
-import PostPreview from "../components/presentaitional/PostPreview";
+import Layout from "../components/presentaitional/layout/Layout";
+import PostPreview from "../components/presentaitional/common/PostPreview";
 import SEO from "../components/container/Seo";
 
 import { CategoryContentsWrapper } from '../components/styled/CenteredContentsWrapper';

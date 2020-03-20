@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
 import Category from '../../datum/category';
-import CategoryNode from '../presentaitional/CategoryNode';
+import CategoryNode from '../presentaitional/layout/side-menu/CategoryNode';
 
 import SideMenuCategoryContainer from '../presentaitional/layout/side-menu/SideMenuCategoryContainer';
 
