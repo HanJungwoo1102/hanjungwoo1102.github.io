@@ -3,6 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { PROFILE } from '../../../constants/style/color';
 
+import * as IMAGE from '../../../constants/resources/image'
+
 const CircleContainer = styled.div`
     border-radius: 50%;
     width: 150px;
@@ -21,7 +23,7 @@ export default () => {
     return (
         <CircleContainer>
             <ProfileImg 
-                src="/hjwBlue.png"
+                src={IMAGE.PROFILE}
                 alt="profile image"
             />
         </CircleContainer>

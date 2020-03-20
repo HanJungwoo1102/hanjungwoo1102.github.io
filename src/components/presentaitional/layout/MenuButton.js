@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { getMediaQueryOfOnlyPc } from '../../../constants/style/size';
 import { BUTTON } from '../../../constants/style/color';
 
+import { ICON_MENU, ICON_MENU_OPENED } from '../../../constants/resources/image';
+
 const MenuButton = styled.button`
     position: fixed;
     z-index: 100;
@@ -41,12 +43,12 @@ export default ({ clickHandler, isMenuOpened }) => {
             {
                 isMenuOpened?
                 <MenuIcon 
-                    src="/icon-menu-opened.png"
+                    src={ICON_MENU_OPENED}
                     alt="opened menu icon"
                 />
                 :
                 <MenuIcon
-                    src="/icon-menu.png"
+                    src={ICON_MENU}
                     alt="menu icon"
                 />
             }

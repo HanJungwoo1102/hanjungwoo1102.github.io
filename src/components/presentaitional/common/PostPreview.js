@@ -8,6 +8,8 @@ import styled from 'styled-components';
 
 import { BACKGROUND2, TEXT2 } from '../../../constants/style/color';
 
+import { DEFAULT_POST } from '../../../constants/resources/image';
+
 const PostPreview = styled.div`
     /* background-color: ${BACKGROUND2}; */
     padding: 15px;
@@ -46,7 +48,7 @@ export default ({ id, title, date, description, image }) => {
                     image ?
                         <PostPreviewImage src={image} />
                     :
-                        <PostPreviewImage src="/default-post-image.png" />
+                        <PostPreviewImage src={DEFAULT_POST} />
                 }
                 <PostInformation>
                     <div className="post-preview-title">{title}</div>
