@@ -63,7 +63,6 @@ export default () => {
     return (
         <AnchorContainer>
             {getAnchorItems(anchors)}
-
         </AnchorContainer>
     );
 };

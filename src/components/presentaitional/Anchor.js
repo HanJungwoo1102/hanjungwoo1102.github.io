@@ -9,13 +9,18 @@ import { TEXT1, TEXT2 } from '../../constants/style/color';
 const Anchor = styled.div`
     color: ${TEXT2};
     font-size: 14px;
+    padding: 3px 0;
 
     ${props => props.isSelected &&
-        `color: ${TEXT1};`
+        `
+        color: ${TEXT1};
+        border-left: 2px solid ${TEXT1};
+        `
+        
     }
 
     ${props => props.depth &&
-        `margin-left: ${(props.depth - 1) * 15}px;`
+        `padding-left: ${(props.depth) * 15}px;`
     }
 `;
 

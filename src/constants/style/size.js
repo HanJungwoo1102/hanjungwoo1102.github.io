@@ -12,8 +12,6 @@ export const WIDTH_FIXED_RIGHT_SIDE = '320px';
     
 const targetNoteBookWidth = `${300 + 740 + 320}px`;
 
-console.log(targetNoteBookWidth);
-
 const createGetMediaQueryFunction = (isMinWidth) => {
     return (children) => {
         return `

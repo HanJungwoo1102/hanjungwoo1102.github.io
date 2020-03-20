@@ -64,11 +64,13 @@ export default ({ data }) => {
                 html={html}
                 isShowContents={isShowContents}
             />
-
-            <FixedRightSideBar>
-                <MarkdownAutoLink />
-                <RelatedPosts relatedPostList={relatedPostList}/>
-            </FixedRightSideBar>
+            {
+                isShowContents &&
+                <FixedRightSideBar>
+                    <MarkdownAutoLink />
+                    <RelatedPosts relatedPostList={relatedPostList}/>
+                </FixedRightSideBar>
+            }
         </Layout>
     );
 };

@@ -7,7 +7,7 @@ const AnchorContainer = styled.div`
     padding: 20px;
     margin-bottom: 20px;
     max-height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
 `;
 
 
