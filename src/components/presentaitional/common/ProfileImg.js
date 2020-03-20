@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { PROFILE } from '../../constants/style/color';
+import { PROFILE } from '../../../constants/style/color';
 
 const CircleContainer = styled.div`
     border-radius: 50%;

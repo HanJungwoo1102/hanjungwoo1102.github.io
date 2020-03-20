@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import Category from '../../datum/category';
 import CategoryNode from '../presentaitional/CategoryNode';
 
-import SideMenuCategoryContainer from '../presentaitional/SideMenuCategoryContainer';
+import SideMenuCategoryContainer from '../presentaitional/layout/side-menu/SideMenuCategoryContainer';
 
 export default () => {
     const getCategoryComponent = useCallback((categoryNode) => {

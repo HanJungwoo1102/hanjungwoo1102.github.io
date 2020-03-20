@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 
-import SideMenuProfile from '../presentaitional/SideMenuProfile';
+import SideMenuProfile from '../presentaitional/layout/side-menu/SideMenuProfile';
 
 export default () => {
     const data = useStaticQuery(graphql`

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { getPathOfPost } from '../../lib/path';
+import { getPathOfPost } from '../../../../lib/path';
 
 import styled from 'styled-components';
 
-import { BACKGROUND2 } from '../../constants/style/color';
+import { BACKGROUND2 } from '../../../../constants/style/color';
 
 const RelatedPost = styled.div`
     background-color: ${BACKGROUND2};

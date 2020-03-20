@@ -1,8 +1,8 @@
 import React from 'react';
-import PostPreview from "./PostPreview";
-import { MainContentsWrapper } from "../styled/CenteredContentsWrapper";
+import PostPreview from "../../common/PostPreview";
+import { MainContentsWrapper } from "../../../styled/CenteredContentsWrapper";
 import styled from 'styled-components';
-import { getMediaQueryOfOnlyPc } from '../../constants/style/size';
+import { getMediaQueryOfOnlyPc } from '../../../../constants/style/size';
 
 const MainPostContainer = styled.div`
     display: flex;
@@ -24,16 +24,16 @@ export default ({ posts }) => {
         <MainContentsWrapper>
             <MainPostContainer>
                 {
-                    posts.map(({ node }) => {
+                    posts.map((post) => {
                         return (
                             <PostWrapper>
                                 <PostPreview
-                                    id={node.frontmatter.id}
-                                    title={node.frontmatter.title}
-                                    date={node.frontmatter.date}
-                                    description={node.excerpt}
-                                    key={node.frontmatter.id}
-                                    imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
+                                    id={post.id}
+                                    title={post.title}
+                                    date={post.date}
+                                    description={post.description}
+                                    key={post.id}
+                                    image={post.image}
                                 />
                             </PostWrapper>
                         );

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BACKGROUND2 } from '../../constants/style/color';
+import { BACKGROUND2 } from '../../../../constants/style/color';
 
 const AnchorContainer = styled.div`
     background-color: ${BACKGROUND2};

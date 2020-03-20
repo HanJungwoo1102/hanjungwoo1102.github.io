@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import styled from 'styled-components';
 
-import { TEXT1, TEXT2 } from '../../constants/style/color';
+import { TEXT1, TEXT2 } from '../../../../constants/style/color';
 
 const Anchor = styled.div`
     color: ${TEXT2};

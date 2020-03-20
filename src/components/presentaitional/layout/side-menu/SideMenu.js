@@ -1,12 +1,12 @@
 import React from 'react';
 
-import SideMenuProfile from '../container/SideMenuProfile';
-import SideMenuCategory from '../container/SideMenuCategory';
+import SideMenuProfile from '../../../container/SideMenuProfile';
+import SideMenuCategory from '../../../container/SideMenuCategory';
 
 import styled from 'styled-components';
 
-import { getMediaQueryOfOnlyPc } from '../../constants/style/size';
-import { BACKGROUND2 } from '../../constants/style/color';
+import { getMediaQueryOfOnlyPc } from '../../../../constants/style/size';
+import { BACKGROUND2 } from '../../../../constants/style/color';
 
 const WIDTH_MOBILE_SIDE_MENU = '100vw';
 const WIDTH_PC_SIDE_MENU = '300px';

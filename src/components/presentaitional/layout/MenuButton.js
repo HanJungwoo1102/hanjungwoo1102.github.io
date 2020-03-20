@@ -2,8 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { getMediaQueryOfOnlyPc } from '../../constants/style/size';
-import { BUTTON } from '../../constants/style/color';
+import { getMediaQueryOfOnlyPc } from '../../../constants/style/size';
+import { BUTTON } from '../../../constants/style/color';
 
 const MenuButton = styled.button`
     position: fixed;

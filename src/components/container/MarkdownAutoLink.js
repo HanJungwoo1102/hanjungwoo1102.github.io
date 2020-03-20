@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import Anchor from '../presentaitional/Anchor';
-import AnchorContainer from '../presentaitional/AnchorContainer';
+import Anchor from '../presentaitional/pages/posts/Anchor';
+import AnchorContainer from '../presentaitional/pages/posts/AnchorContainer';
 
 const isAnchorSelected = (anchorTop, scrollTop) =>{
     return scrollTop > anchorTop;

@@ -1,13 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/presentaitional/Layout";
+import Layout from "../components/layout/presentaitional/Layout";
 import SEO from "../components/container/Seo";
-import MainRecentPosts from '../components/presentaitional/MainRecentPosts';
+import MainRecentPosts from '../components/presentaitional/pages/main/MainRecentPosts';
+
+import { getPostObjectByEdge } from '../lib/mapping-object';
 
 export default ({ data }) => {
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.allMarkdownRemark.edges.map(getPostObjectByEdge);
 
+    console.log(posts)
+    
     return (
         <Layout>
             <SEO
@@ -31,8 +35,8 @@ export const pageQuery = graphql`
                         title
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 800) {
-                                    ...GatsbyImageSharpFluid
+                                original {
+                                    src
                                 }
                             }
                         }

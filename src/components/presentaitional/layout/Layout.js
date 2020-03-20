@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from './node_modules/react';
 
 import MenuButton from './MenuButton';
-import SideMenu from './SideMenu';
+import SideMenu from './side-menu/SideMenu';
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from './node_modules/styled-components';
 
-import * as COLOR from '../../constants/style/color';
+import * as COLOR from '../../../constants/style/color';
 
 const GlobalStyle = createGlobalStyle`
     a:link, a:visited, a:active { text-decoration:none; color:${COLOR.TEXT1}; }

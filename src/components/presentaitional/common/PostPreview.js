@@ -1,15 +1,12 @@
 import React from 'react';
 
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 
-import { getPathOfPost } from '../../lib/path';
-
-import DefaultPostImg from '../presentaitional/DefaultPostImg';
+import { getPathOfPost } from '../../../lib/path';
 
 import styled from 'styled-components';
 
-import { BACKGROUND2, TEXT2 } from '../../constants/style/color';
+import { BACKGROUND2, TEXT2 } from '../../../constants/style/color';
 
 const PostPreview = styled.div`
     /* background-color: ${BACKGROUND2}; */
@@ -17,8 +14,9 @@ const PostPreview = styled.div`
     margin-bottom: 15px;
 `;
 
-const PostPreviewImage = styled.div`
+const PostPreviewImage = styled.img`
     width: 100%;
+    height: 250px;
 `;
 
 const PostInformation = styled.div`
@@ -40,18 +38,16 @@ const PostInformation = styled.div`
 
 `;
 
-export default ({ id, title, date, description, imageFluid }) => {
+export default ({ id, title, date, description, image }) => {
     return (
         <Link to={getPathOfPost(id)}>
             <PostPreview>
-                <PostPreviewImage>
-                    {
-                        imageFluid !== null ?
-                            <Img fluid={imageFluid} />
-                        :
-                            <DefaultPostImg />
-                    }
-                </PostPreviewImage>
+                {
+                    image ?
+                        <PostPreviewImage src={image} />
+                    :
+                        <PostPreviewImage src="/default-post-image.png" />
+                }
                 <PostInformation>
                     <div className="post-preview-title">{title}</div>
                     <div className="post-preview-date">{date}</div>

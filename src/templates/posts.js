@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../components/presentaitional/Layout';
+import Layout from '../components/layout/presentaitional/Layout';
 import SEO from "../components/container/Seo";
-import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
+import FixedRightSideBar from "../components/presentaitional/common/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
-import RelatedPosts from "../components/presentaitional/RelatedPosts";
-import PostContainer from "../components/presentaitional/PostContainer";
+import RelatedPosts from "../components/presentaitional/pages/posts/RelatedPosts";
+import PostContainer from "../components/presentaitional/pages/posts/PostContainer";
 
 export default ({ data }) => {
     const {

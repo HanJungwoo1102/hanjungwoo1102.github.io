@@ -15,3 +15,4 @@ const createContentsWrapper = (maxWidth) => {
 
 export const PostContentsWrapper = createContentsWrapper(MAX_WIDTH_OF_POST_CONTENTS_PAGE);
 export const MainContentsWrapper = createContentsWrapper('1360px');
+export const CategoryContentsWrapper = createContentsWrapper('1360px');

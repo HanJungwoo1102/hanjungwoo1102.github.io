@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProfileImg from '../presentaitional/ProfileImg';
+import ProfileImg from '../../common/ProfileImg';
 
 import styled from 'styled-components';
 

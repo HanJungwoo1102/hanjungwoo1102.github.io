@@ -1,12 +1,16 @@
 import React from 'react';
 import { graphql } from "gatsby"
 
-import Layout from "../components/presentaitional/Layout";
+import Layout from "../components/layout/presentaitional/Layout";
 import PostPreview from "../components/presentaitional/PostPreview";
 import SEO from "../components/container/Seo";
 
+import { CategoryContentsWrapper } from '../components/styled/CenteredContentsWrapper';
+
+import { getPostObjectByEdge } from '../lib/mapping-object';
+
 export default ({ data, pageContext }) => {
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.allMarkdownRemark.edges.map(getPostObjectByEdge);
     const name = pageContext.name;
 
     return (
@@ -14,23 +18,25 @@ export default ({ data, pageContext }) => {
             <SEO
                 title={`Category ${name}`}
             />
-            <div>Category</div>
-            <div>{name}</div>
-    
-            {
-                posts.map(({ node }) => {
-                    return (
-                        <PostPreview
-                            id={node.frontmatter.id}
-                            title={node.frontmatter.title}
-                            date={node.frontmatter.date}
-                            description={node.excerpt}
-                            key={node.frontmatter.id}
-                            imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
-                        />
-                    );
-                })
-            }
+            <CategoryContentsWrapper>
+                <div>Category</div>
+                <div>{name}</div>
+        
+                {
+                    posts.map((post) => {
+                        return (
+                            <PostPreview
+                                id={post.id}
+                                title={post.title}
+                                date={post.date}
+                                description={post.description}
+                                key={post.id}
+                                image={post.image}
+                            />
+                        );
+                    })
+                }
+            </CategoryContentsWrapper>
         </Layout>
     );
 };
@@ -46,8 +52,8 @@ export const pageQuery = graphql`
                         title
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 800) {
-                                    ...GatsbyImageSharpFluid
+                                original {
+                                    src
                                 }
                             }
                         }
