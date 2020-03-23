@@ -5,10 +5,10 @@ import Layout from '../components/presentaitional/layout/Layout';
 import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/common/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
-import RelatedPosts from "../components/presentaitional/pages/posts/RelatedPosts";
 import PostContainer from "../components/presentaitional/pages/posts/PostContainer";
+import RelatedPosts from "../components/container/pages/posts/RelatedPosts";
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
     const {
         markdownRemark: {
             frontmatter,
@@ -19,6 +19,7 @@ export default ({ data }) => {
             edges,
         },
     } = data;
+    const { postId } = pageContext;
     const [scrollTop, setScrollTop] = useState(null);
 
     const relatedPostList = useMemo(() => {
@@ -68,7 +69,7 @@ export default ({ data }) => {
                 isShowContents &&
                 <FixedRightSideBar>
                     <MarkdownAutoLink />
-                    <RelatedPosts relatedPostList={relatedPostList}/>
+                    <RelatedPosts posts={relatedPostList} currentPostId={postId}/>
                 </FixedRightSideBar>
             }
         </Layout>
