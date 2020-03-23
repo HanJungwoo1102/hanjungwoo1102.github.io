@@ -1,24 +1,26 @@
 import React from 'react';
-
 import { Link } from "gatsby"
 
 import { getPathOfPost } from '../../../lib/path';
 
 import styled from 'styled-components';
 
-import { BACKGROUND2, TEXT2 } from '../../../constants/style/color';
-
+import { TEXT2 } from '../../../constants/style/color';
 import { DEFAULT_POST } from '../../../constants/resources/image';
 
 const PostPreview = styled.div`
-    /* background-color: ${BACKGROUND2}; */
-    padding: 15px;
     margin-bottom: 15px;
 `;
 
-const PostPreviewImage = styled.img`
+const PostPreviewImage = styled.div`
     width: 100%;
-    height: 250px;
+    padding-top: 65%;
+    background-size: 100% 100%;
+
+    ${
+        props => props.backgroundImage &&
+        `background-image: url('${props.backgroundImage}');`
+    }
 `;
 
 const PostInformation = styled.div`
@@ -46,9 +48,9 @@ export default ({ id, title, date, description, image }) => {
             <PostPreview>
                 {
                     image ?
-                        <PostPreviewImage src={image} />
+                        <PostPreviewImage backgroundImage={image} />
                     :
-                        <PostPreviewImage src={DEFAULT_POST} />
+                        <PostPreviewImage backgroundImage={DEFAULT_POST} />
                 }
                 <PostInformation>
                     <div className="post-preview-title">{title}</div>

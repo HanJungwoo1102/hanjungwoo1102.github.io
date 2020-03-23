@@ -10,11 +10,11 @@ const MainPostContainer = styled.div`
 `;
 
 const PostWrapper = styled.div`
-    width: 80%;
+    width: 100%;
 
     ${
         getMediaQueryOfOnlyPc(`
-            width: 30%;
+            width: 260px;
         `)
     }
 `;

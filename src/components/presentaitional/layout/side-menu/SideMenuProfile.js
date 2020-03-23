@@ -1,8 +1,8 @@
 import React from 'react';
-
 import ProfileImg from '../../common/ProfileImg';
-
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { getPathOfMain } from '../../../../lib/path';
 
 const SideMenuProfile = styled.div`
     display: flex;
@@ -18,7 +18,9 @@ const Title = styled.div`
 export default ({ title }) => {
     return (
         <SideMenuProfile>
-            <Title>{title}</Title>
+            <Link to={getPathOfMain()}>
+                <Title>{title}</Title>
+            </Link>
             <ProfileImg/>
         </SideMenuProfile>
     );

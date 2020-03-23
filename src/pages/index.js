@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/presentaitional/layout/Layout";
 import SEO from "../components/container/Seo";
 import MainRecentPosts from '../components/presentaitional/pages/main/MainRecentPosts';
+import MainCover from '../components/presentaitional/pages/main/MainCover';
 
 import { getPostObjectByEdge } from '../lib/mapping-object';
 
@@ -17,8 +18,8 @@ export default ({ data }) => {
             <SEO
                 title="home"
             />
-            hi
-    
+            
+            <MainCover />
             <MainRecentPosts posts={posts} />
         </Layout>
     );
