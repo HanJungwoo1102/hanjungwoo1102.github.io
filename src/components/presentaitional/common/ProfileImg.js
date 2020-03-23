@@ -7,8 +7,8 @@ import * as IMAGE from '../../../constants/resources/image'
 
 const CircleContainer = styled.div`
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ const CircleContainer = styled.div`
 `;
 
 const ProfileImg = styled.img`
-    width: 100px;
+    width: 50px;
 `;
 
 export default () => {

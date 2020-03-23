@@ -9,7 +9,6 @@ import { TEXT2 } from '../../../constants/style/color';
 import { DEFAULT_POST } from '../../../constants/resources/image';
 
 const PostPreview = styled.div`
-    margin-bottom: 15px;
 `;
 
 const PostPreviewImage = styled.div`

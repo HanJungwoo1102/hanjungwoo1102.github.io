@@ -9,37 +9,50 @@ const MainPostContainer = styled.div`
     flex-wrap: wrap;
 `;
 
+const Title = styled.div`
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+`;
+
 const PostWrapper = styled.div`
     width: 100%;
+    margin-bottom: 24px;
 
     ${
         getMediaQueryOfOnlyPc(`
-            width: 260px;
+            width: 244px;
+            margin-right: 20px;
         `)
     }
 `;
 
 export default ({ posts }) => {
     return (
-        <MainContentsWrapper>
-            <MainPostContainer>
-                {
-                    posts.map((post) => {
-                        return (
-                            <PostWrapper>
-                                <PostPreview
-                                    id={post.id}
-                                    title={post.title}
-                                    date={post.date}
-                                    description={post.description}
-                                    key={post.id}
-                                    image={post.image}
-                                />
-                            </PostWrapper>
-                        );
-                    })
-                }
-            </MainPostContainer>
-        </MainContentsWrapper>
+        <>
+            <MainContentsWrapper>
+                <Title>
+                    Recent Post
+                </Title>
+                <MainPostContainer>
+                    {
+                        posts.map((post) => {
+                            return (
+                                <PostWrapper>
+                                    <PostPreview
+                                        id={post.id}
+                                        title={post.title}
+                                        date={post.date}
+                                        description={post.description}
+                                        key={post.id}
+                                        image={post.image}
+                                    />
+                                </PostWrapper>
+                            );
+                        })
+                    }
+                </MainPostContainer>
+            </MainContentsWrapper>
+        </>
     );
 };

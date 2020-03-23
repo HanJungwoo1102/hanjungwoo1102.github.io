@@ -2,12 +2,11 @@ import React from 'react';
 import { graphql } from "gatsby"
 
 import Layout from "../components/presentaitional/layout/Layout";
-import PostPreview from "../components/presentaitional/common/PostPreview";
 import SEO from "../components/container/Seo";
 
-import { CategoryContentsWrapper } from '../components/styled/CenteredContentsWrapper';
-
 import { getPostObjectByEdge } from '../lib/mapping-object';
+import RecentPosts from '../components/presentaitional/pages/categories/RecentPosts';
+import Header from '../components/presentaitional/pages/categories/Header';
 
 export default ({ data, pageContext }) => {
     const posts = data.allMarkdownRemark.edges.map(getPostObjectByEdge);
@@ -16,27 +15,11 @@ export default ({ data, pageContext }) => {
     return (
         <Layout>
             <SEO
-                title={`Category ${name}`}
+                title={`Category - ${name}`}
             />
-            <CategoryContentsWrapper>
-                <div>Category</div>
-                <div>{name}</div>
-        
-                {
-                    posts.map((post) => {
-                        return (
-                            <PostPreview
-                                id={post.id}
-                                title={post.title}
-                                date={post.date}
-                                description={post.description}
-                                key={post.id}
-                                image={post.image}
-                            />
-                        );
-                    })
-                }
-            </CategoryContentsWrapper>
+
+            <Header name={name} />      
+            <RecentPosts posts={posts} />
         </Layout>
     );
 };

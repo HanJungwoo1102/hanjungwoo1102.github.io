@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const CategoryNode = styled.div`
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 12px;
 `;
 
 const ChildrenCategoryNodeContainer = styled.div`

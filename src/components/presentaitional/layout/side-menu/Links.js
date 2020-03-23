@@ -10,13 +10,14 @@ import { ICON_GITHUB, ICON_INSTGRAM } from '../../../../constants/resources/imag
 const Links = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 `;
 
 const Link = styled.a`
     display: flex;
     align-items: center;
-    font-size: 12px;
-    padding: 8px 16px;
+    font-size: 11px;
+    padding: 6px 8px;
     border-radius: 4px;
     color: ${TEXT1};
     background-color: ${BUTTON};
@@ -25,8 +26,8 @@ const Link = styled.a`
     font-weight: 500;
 
     img {
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
         margin-right: 8px;
     }
 `;
