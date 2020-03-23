@@ -2,6 +2,7 @@ import React from 'react';
 
 import SideMenuProfile from '../../../container/SideMenuProfile';
 import SideMenuCategory from '../../../container/SideMenuCategory';
+import Links from './Links';
 
 import styled from 'styled-components';
 
@@ -49,6 +50,7 @@ export default ({ isMenuOpened }) => {
     return (
         <SideMenu isOpened={isMenuOpened}>
             <SideMenuProfile/>
+            <Links/>
             <SideMenuCategory/>
         </SideMenu>
     );
