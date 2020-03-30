@@ -7,12 +7,14 @@ const centeredContentsWrapper = styled.div`
     margin: 0 auto;
 `;
 
-const createContentsWrapper = (maxWidth) => {
-    return styled(centeredContentsWrapper)`
-        max-width: ${maxWidth};
-    `;
-}
+export const PostContentsWrapper = styled(centeredContentsWrapper)`
+    max-width: ${MAX_WIDTH_OF_POST_CONTENTS_PAGE};
+`;
 
-export const PostContentsWrapper = createContentsWrapper(MAX_WIDTH_OF_POST_CONTENTS_PAGE);
-export const MainContentsWrapper = createContentsWrapper('1360px');
-export const CategoryContentsWrapper = createContentsWrapper('1360px');
+export const MainContentsWrapper = styled(centeredContentsWrapper)`
+    max-width: 1360px;
+`;
+
+export const CategoryContentsWrapper = styled(centeredContentsWrapper)`
+    max-width: 1360px;
+`;

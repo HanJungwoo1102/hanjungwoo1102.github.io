@@ -9,6 +9,7 @@ import { BACKGROUND2, TEXT2 } from '../../../../constants/style/color';
 const RelatedPost = styled.div`
     background-color: ${BACKGROUND2};
     padding: 20px;
+    border-radius: 4px;
 
     .title {
         color: ${TEXT2};

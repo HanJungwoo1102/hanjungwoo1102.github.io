@@ -8,6 +8,7 @@ const AnchorContainer = styled.div`
     margin-bottom: 20px;
     max-height: 500px;
     overflow-y: auto;
+    border-radius: 4px;
 `;
 
 
