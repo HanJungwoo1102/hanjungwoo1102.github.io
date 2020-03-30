@@ -32,6 +32,7 @@ const BlogPostImageCover = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    text-align: center;
 
     padding: 20px;
     box-sizing: border-box;
@@ -48,6 +49,26 @@ const BlogPostContentsContainer = styled.div`
     ${
         props => props.isShowContents &&
         'opacity: 1;'
+    }
+`;
+
+const TitleContainer = styled.div`
+    text-align: center;
+    margin: 50px 0 100px;
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+`;
+
+const Content = styled.div`
+    hr {
+        margin: 100px 0;
     }
 `;
 
@@ -71,9 +92,11 @@ export default ({
 
             <PostContentsWrapper>
                 <BlogPostContentsContainer isShowContents={isShowContents}>
-                    <h1>{title}</h1>
-                    <h2>{date}</h2>
-                    <div className="blog-post-content"
+                    <TitleContainer>
+                        <h1>{title}</h1>
+                        <h4>{date}</h4>
+                    </TitleContainer>
+                    <Content
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </BlogPostContentsContainer>

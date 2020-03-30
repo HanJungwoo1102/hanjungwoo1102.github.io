@@ -41,7 +41,7 @@ export default () => {
             </Link>
             <Link href={INSTGRAM} target="_blank">
                 <img src={ICON_INSTGRAM} alt="instagram icon" />
-                INSTGRAM
+                INSTAGRAM
             </Link>
         </Links>
     );

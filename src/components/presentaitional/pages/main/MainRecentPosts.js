@@ -2,7 +2,7 @@ import React from 'react';
 import PostPreview from "../../common/PostPreview";
 import { MainContentsWrapper } from "../../../styled/CenteredContentsWrapper";
 import styled from 'styled-components';
-import { getMediaQueryOfOnlyPc } from '../../../../constants/style/size';
+import { conditionOfMediaQuery } from '../../../../constants/style/size';
 
 const MainPostContainer = styled.div`
     display: flex;
@@ -19,11 +19,9 @@ const PostWrapper = styled.div`
     width: 100%;
     margin-bottom: 24px;
 
-    ${
-        getMediaQueryOfOnlyPc(`
-            width: 244px;
-            margin-right: 20px;
-        `)
+    @media ${conditionOfMediaQuery.laptop} {
+        width: 244px;
+        margin-right: 20px;
     }
 `;
 

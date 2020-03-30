@@ -10,6 +10,7 @@ const Anchor = styled.div`
     color: ${TEXT2};
     font-size: 14px;
     padding: 3px 0;
+    cursor: pointer;
 
     ${props => props.isSelected &&
         `

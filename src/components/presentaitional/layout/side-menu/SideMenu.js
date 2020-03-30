@@ -6,7 +6,7 @@ import Links from './Links';
 
 import styled from 'styled-components';
 
-import { getMediaQueryOfOnlyPc } from '../../../../constants/style/size';
+import { conditionOfMediaQuery } from '../../../../constants/style/size';
 import { BACKGROUND2 } from '../../../../constants/style/color';
 
 const WIDTH_MOBILE_SIDE_MENU = '100vw';
@@ -21,6 +21,7 @@ const SideMenu = styled.aside`
     width: ${WIDTH_MOBILE_SIDE_MENU};
     height: 100vh;
     transition: left 0.3s;
+
     ${props => props.isOpened?
         `
             left: 0;
@@ -28,21 +29,15 @@ const SideMenu = styled.aside`
         :
         `
             left: -${WIDTH_MOBILE_SIDE_MENU};
-            ${getMediaQueryOfOnlyPc(
-                `
-                    left: -${WIDTH_PC_SIDE_MENU};
-                `
-            )}
+            @media ${conditionOfMediaQuery.laptop} {
+                left: -${WIDTH_PC_SIDE_MENU};
+            }
         `
     }
 
-    ${
-        getMediaQueryOfOnlyPc(
-            `
-            padding-top: 80px;
+    @media ${conditionOfMediaQuery.laptop} {
+        padding-top: 80px;
             width: ${WIDTH_PC_SIDE_MENU};
-            `
-        )
     }
 `;
 

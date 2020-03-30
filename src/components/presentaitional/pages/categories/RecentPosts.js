@@ -4,18 +4,16 @@ import styled from 'styled-components';
 import PostPreview from "../../../presentaitional/common/PostPreview";
 import { CategoryContentsWrapper } from '../../../styled/CenteredContentsWrapper';
 
-import { getMediaQueryOfOnlyPc } from '../../../../constants/style/size';
+import { conditionOfMediaQuery } from '../../../../constants/style/size';
 
 
 const PostWrapper = styled.div`
     width: 100%;
     margin-bottom: 24px;
 
-    ${
-        getMediaQueryOfOnlyPc(`
-            width: 244px;
-            margin-right: 20px;
-        `)
+    @media ${conditionOfMediaQuery.laptop} {
+        width: 244px;
+        margin-right: 20px;
     }
 `;
 

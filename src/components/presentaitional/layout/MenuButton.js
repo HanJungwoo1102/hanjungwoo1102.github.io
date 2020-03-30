@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { getMediaQueryOfOnlyPc } from '../../../constants/style/size';
+import { conditionOfMediaQuery } from '../../../constants/style/size';
 import { BUTTON } from '../../../constants/style/color';
 
 import { ICON_MENU, ICON_MENU_OPENED } from '../../../constants/resources/image';
@@ -22,13 +22,9 @@ const MenuButton = styled.button`
     bottom: 20px;
     right: 20px;
 
-    ${
-        getMediaQueryOfOnlyPc(
-            `
-            top: 20px;
-            left: 20px;
-            `
-        )
+    @media ${conditionOfMediaQuery.laptop} {
+        top: 20px;
+        left: 20px;
     }
 `;
 

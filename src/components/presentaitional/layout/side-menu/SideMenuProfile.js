@@ -13,6 +13,7 @@ const SideMenuProfile = styled.div`
 
 const Title = styled.div`
     margin-bottom: 20px;
+    text-align: center;
 `;
 
 export default ({ title }) => {
@@ -20,8 +21,8 @@ export default ({ title }) => {
         <SideMenuProfile>
             <Link to={getPathOfMain()}>
                 <Title>{title}</Title>
+                <ProfileImg/>
             </Link>
-            <ProfileImg/>
         </SideMenuProfile>
     );
 };
