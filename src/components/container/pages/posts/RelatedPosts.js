@@ -37,7 +37,7 @@ export default ({ posts, currentPostId }) => {
         } else {
             setCurrentPageIndex(currentPageIndex - 1);
         }
-    }, [currentPageIndex]);
+    }, [currentPageIndex, lastPageIndex]);
 
     const nextClickHandler = useCallback(() => {
         if (currentPageIndex === lastPageIndex) {
@@ -45,7 +45,7 @@ export default ({ posts, currentPostId }) => {
         } else {
             setCurrentPageIndex(currentPageIndex + 1);
         }
-    }, []);
+    }, [currentPageIndex, lastPageIndex]);
 
     return (
         <RelatedPosts
