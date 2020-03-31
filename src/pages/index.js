@@ -11,8 +11,6 @@ import { getPostObjectByEdge } from '../lib/mapping-object';
 export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges.map(getPostObjectByEdge);
 
-    console.log(posts)
-    
     return (
         <Layout>
             <SEO
