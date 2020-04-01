@@ -65,13 +65,10 @@ export default ({ data, pageContext }) => {
                 html={html}
                 isShowContents={isShowContents}
             />
-            {
-                isShowContents &&
-                <FixedRightSideBar>
-                    <MarkdownAutoLink />
-                    <RelatedPosts posts={relatedPostList} currentPostId={postId}/>
-                </FixedRightSideBar>
-            }
+            <FixedRightSideBar>
+                <MarkdownAutoLink />
+                <RelatedPosts posts={relatedPostList} currentPostId={postId}/>
+            </FixedRightSideBar>
         </Layout>
     );
 };

@@ -1,14 +1,14 @@
 import React from 'react';
 import Img from "gatsby-image"
 import styled from 'styled-components';
-
+import { conditionOfMediaQuery } from '../../../../constants/style/size';
 import { PostContentsWrapper } from '../../../styled/CenteredContentsWrapper';
 
 const BlogPostContainer = styled.div`
     position: relative;
 `;
 
-const BlogPostImageWrapper = styled.div`
+const BlogPostFullImage = styled.div`
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -23,9 +23,13 @@ const BlogPostImageWrapper = styled.div`
         props => props.isShowContents &&
         'display:none;'
     }
+
+    @media ${conditionOfMediaQuery.laptop} {
+        display: none;
+    }
 `;
 
-const BlogPostImageCover = styled.div`
+const BlogPostFullImageCover = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
@@ -46,6 +50,11 @@ const BlogPostImageCover = styled.div`
 const BlogPostContentsContainer = styled.div`
     transition: opacity 1s;
     opacity: 0;
+
+    @media ${conditionOfMediaQuery.laptop} {
+        opacity: 1;
+    }
+
     ${
         props => props.isShowContents &&
         'opacity: 1;'
@@ -79,16 +88,16 @@ export default ({
 }) => {
     return (
         <BlogPostContainer>
-            <BlogPostImageWrapper isShowContents={isShowContents}>
+            <BlogPostFullImage isShowContents={isShowContents}>
                 {
                     image &&
                     <Img fluid={image.childImageSharp.fluid} />
                 }
-                <BlogPostImageCover>
+                <BlogPostFullImageCover>
                     <h1>{title}</h1>
                     <h2>{date}</h2>
-                </BlogPostImageCover>
-            </BlogPostImageWrapper>
+                </BlogPostFullImageCover>
+            </BlogPostFullImage>
 
             <PostContentsWrapper>
                 <BlogPostContentsContainer isShowContents={isShowContents}>
