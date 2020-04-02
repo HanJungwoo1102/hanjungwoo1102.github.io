@@ -1,27 +1,18 @@
 ---
 id: 1
-date: "2020-02-19"
 title: "Gatsby 로 개인 blog 만들기 (1)"
-image: ./aaaa.jpg
+date: "2020-02-19"
+image: ./gatsby.jpeg
 ---
 
-여러 블로그 플랫폼에 안주하지 못하고 돌아다니던 중 React 로 github 블로그를 만들 수 있다는 소문을 듣게 되었다. 그래서 찾아보다 Gatsby 를 알게 됐다.
+## 블로그
 
-## Install Gatsby
+블로그 운영을 꼭 해보고 싶었다. 나도 많은 블로그에서 도움을 얻기도 했고 블로그 게시글 포스팅을 통해 내가 생각하고 배운 것들을 정리할 수 있을 거라고 생각했다. 하지만 글 쓰는 재주도 없었고 귀찮기만 했었다. 마음먹고 열심히 해보려다가 포기하고 안하가를 여러 번 반복했었다. 열심히 다시 해보자고 마음 먹을 때마다 블로그를 새로 만들었어서 여러 블로그를 만들어봤다. Jekyll 을 이용한 Github 블로그, tistory, notion 등에 블로그를 만들었었다. 그러고 이번에 또 블로그를 다시 열심히 해보고 싶어서 다시 알아보게 됐다. 요즘 React 를 자주 쓰고 있어서 혹시나 React 를 사용해 블로그를 만들어 볼 수 있을까 찾아보다가 Gatsby 에 대해서 알게 됐다.
 
-```
-    npm install gatsby
-```
+## Gatsby 란??
 
-## gatsby new
+React 를 기반으로하는 정적 페이지 생성 Framework 이다. 처음에는 정적 페이지 생성기라고 해서 감이 잘 안잡혔다. 이럴 때는 역시 비슷한 것과 비교해 보는게 가장 좋은 것 같다. 나는 SPA 와 비교를 해봤다.
 
-### sdfds
+- 빌드된 결과 : React Router 를 이용해 Signle page application 을 만들어 본 적이 있는데 빌드돼서 하나의 js bundle로 나왔다. 하지만 Gatsby 는 페이지 마다 html, js, css 를 만들어 냈다.
 
-#### sdffsd
-
-###### sd
-```
-    gatsby new blog h
-```
-
-![sss](./aaaa.jpg)
+- data : SPA 는 꼭 그래야 한다는 것은 아니지만 내가 제작한 SPA 에서는 각 페이지 마다 api 로 호출해서 데이터를 호출 했다면 Gatsby 는 정적 Data 들을 빌드되는 시점에 mapping 해서 여러 페이지를 만들어 냈다. 예를 들어 SPA 에서는 하나의
