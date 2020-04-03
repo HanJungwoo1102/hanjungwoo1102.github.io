@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HanJungwoo]]></title><description><![CDATA[Han Jungwoo Blog]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Apr 2020 03:53:12 GMT</lastBuildDate><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (1)]]></title><description><![CDATA[…]]></description><link>https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</guid><pubDate>Wed, 19 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HanJungwoo]]></title><description><![CDATA[Han Jungwoo Blog]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Apr 2020 08:00:43 GMT</lastBuildDate><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (1)]]></title><description><![CDATA[…]]></description><link>https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</guid><pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 730px;&quot;
     &gt;
@@ -77,7 +77,108 @@
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[My first blog post2]]></title><description><![CDATA[1. 마크다운에 관하여 1.1. 마크다운이란? Markdown은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML…]]></description><link>https://hanjungwoo1102.github.io/2-b/b/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/2-b/b/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-마크다운에-관하여&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC&quot; aria-label=&quot;1 마크다운에 관하여 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 마크다운에 관하여&lt;/h1&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (2) - setting and deploy]]></title><description><![CDATA[준비 gatsby 를 깔고 개발 환경 세팅과 gh-pages 를 이용한 배포 까지의 준비과정을 정리해 봤다. Install Gatsby node js, npm, git 은 깔려 있었고 gatsby 만 설치하면 됐다. Gatsby Library…]]></description><link>https://hanjungwoo1102.github.io/2-make-blog-by-gatsby-2/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/2-make-blog-by-gatsby-2/</guid><pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;준비&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A4%80%EB%B9%84&quot; aria-label=&quot;준비 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;준비&lt;/h1&gt;
+&lt;p&gt;gatsby 를 깔고 개발 환경 세팅과 gh-pages 를 이용한 배포 까지의 준비과정을 정리해 봤다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;install-gatsby&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#install-gatsby&quot; aria-label=&quot;install gatsby permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install Gatsby&lt;/h2&gt;
+&lt;p&gt;node js, npm, git 은 깔려 있었고 gatsby 만 설치하면 됐다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;npm install -g gatsby-cli&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;gatsby-library&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#gatsby-library&quot; aria-label=&quot;gatsby library permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Gatsby Library&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;Gatsby Library&lt;/a&gt; 에 가보면 다른 사람들이 만들어 놓은 여러 템플릿?? 테마?? 가 존재한다. 이 중에서 나는 내가 원하는 기능을 가지고 있고 디자인 마음에 드는 블로그를 찾아봤다. 하지만 발견하지 못했고 그래서 그냥 처음부터 내가 만들자!! 라는 생각으로 가장 기초 테마로 (hello world 만 쓰여있는) 시작하기로 했다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그리고 잘 되나 돌려보기 위해 개발 환경으로 돌려보기로 했다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;gatsby develop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost:8000/&quot;&gt;http://localhost:8000/&lt;/a&gt; 에서 확인해본 결과 hello world 만 떠있는 빈 페이지가 잘 나왔다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;github-배포&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-%EB%B0%B0%ED%8F%AC&quot; aria-label=&quot;github 배포 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github 배포&lt;/h2&gt;
+&lt;p&gt;보통 Gatsby 블로그는 Netlify 로 배포한다고 한다. 하지만 나는 다른 곳에서 호스팅 하기를 원하지 않았다. 그래서 찾아보댜가 gh-pages 란 것을 알게 됐다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;gh-pages 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;npm install gh-pages --save-dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;package.json 에 deploy 를 위한 스크립트 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;4&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;script: {&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    ...&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;    &amp;quot;deploy&amp;quot;: &amp;quot;gatsby build &amp;&amp; gh-pages -d public -b master&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;배포 해보기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;&quot; data-index=&quot;5&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;npm run deploy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;master 말고 다른 브랜치에 배포해서 사용하고 싶었지만 user page 일 경우 master 에 빌드 돼야 한다고 한다. hanjungwoo1102.github.io 에 배포하고 싶어서 나는 그냥 master 에 배포하기로 했다. (다른 프로젝트에서 배포하면 hanjunggwoo1102.github.io/other-project-name/ 으로 배포가 되고 그 떄는 다른 브랜치에 배포할 수 있다고 알고 있다.)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 730px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/17a7a/only-master.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.86188579017264%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABuUlEQVQ4y6WT227bMAyG/f4v1xa7WboN2BYf5RaxzrIt6R9FO14ypBiGyfhAipQIHuSqaVuIcUSRYZ5RVsa/rZzzQWVMgLMBSiosYUFaIxOXlYhYSW570ud1s+/76xnOYKeqjUZnJXo9olUCnRpJf0MrSSdbM/XozdvmnwZ0ZC/7cq6TA59RyUJnizVHVC/hhE/+FS/uhGd7wpP9TvJM8oxnt/Fkf+JzOuMbanx9wJd8xin/gKbA1bu9wCYPl8MN8064wzOeZblzZfN7LGlFJcQIKQ0uFwmtDZTSkJPCRGhlYMlmjCVJZRkP7TJcSA+Hk1JCJZsGU11DNS2cEHDDANv3rMcYeXIpRSbShZgyw9/NdMtX/NVIAQpaSszeIThPbNKR9J5KXBLcnJByfvhU8m7nDNtBoO0F6q6nkgy/RSbMHCx46tscCQqY8h4MH5dsrKNAFop6FWP66OkyXP4N1+yuOpccQuBMSr/+d3HAjkpt2g4DTbtMuDBRP1nXmtsg6S9SSh02yX56BaQbt2AyEWFJW8lH2mWClKWlYYj3Ccu6Hvbf7OXu+/uS9x7eX0hH4HL5z0n+jTKDXw3LQvovNAqaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;only master&quot;
+        title=&quot;only master&quot;
+        src=&quot;/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/e9beb/only-master.png&quot;
+        srcset=&quot;/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/e6f05/only-master.png 183w,
+/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/2e8d1/only-master.png 365w,
+/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/e9beb/only-master.png 730w,
+/static/a3ed2a470e37a45a4f0c52aa1f3c2fec/17a7a/only-master.png 753w&quot;
+        sizes=&quot;(max-width: 730px) 100vw, 730px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[My first blog post2]]></title><description><![CDATA[1. 마크다운에 관하여 1.1. 마크다운이란? Markdown은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML…]]></description><link>https://hanjungwoo1102.github.io/0-b/b/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/0-b/b/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-마크다운에-관하여&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC&quot; aria-label=&quot;1 마크다운에 관하여 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 마크다운에 관하여&lt;/h1&gt;
 &lt;h2 id=&quot;11-마크다운이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#11-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;11 마크다운이란 permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.1. 마크다운이란?&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://whatismarkdown.com/&quot;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML로 변환이 가능하다. 특수기호와 문자를 이용한 매우 간단한 구조의 문법을 사용하여 웹에서도 보다 빠르게 컨텐츠를 작성하고 보다 직관적으로 인식할 수 있다.
 마크다운이 최근 각광받기 시작한 이유는 깃헙(&lt;a href=&quot;https://github.com&quot;&gt;https://github.com&lt;/a&gt;) 덕분이다. 깃헙의 저장소Repository에 관한 정보를 기록하는 README.md는 깃헙을 사용하는 사람이라면 누구나 가장 먼저 접하게 되는 마크다운 문서였다. 마크다운을 통해서 설치방법, 소스코드 설명, 이슈 등을 간단하게 기록하고 가독성을 높일 수 있다는 강점이 부각되면서 점점 여러 곳으로 퍼져가게 된다.&lt;/p&gt;
