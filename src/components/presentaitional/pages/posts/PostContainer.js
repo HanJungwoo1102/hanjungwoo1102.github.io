@@ -63,7 +63,7 @@ const BlogPostContentsContainer = styled.div`
 
 const TitleContainer = styled.div`
     text-align: center;
-    margin: 50px 0 100px;
+    padding: 50px 0 100px;
 
     h1 {
         font-size: 20px;
@@ -77,7 +77,25 @@ const TitleContainer = styled.div`
 
 const Content = styled.div`
     hr {
-        margin: 100px 0;
+        margin: 80px 0;
+    }
+    line-height: 27px;
+    h1,h2,h3,h4,h5,h6 {
+        margin: 30px 0;
+    }
+`;
+
+const HeaderImage = styled.div`
+    display: none;
+    height: 500px;
+
+    .gatsby-image-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media ${conditionOfMediaQuery.laptop} {
+        display: block;
     }
 `;
 
@@ -98,13 +116,18 @@ export default ({
                     <h2>{date}</h2>
                 </BlogPostFullImageCover>
             </BlogPostFullImage>
-
+            <HeaderImage>
+                {
+                    image &&
+                    <Img fluid={image.childImageSharp.fluid} />
+                }
+            </HeaderImage>
+            <TitleContainer>
+                <h1>{title}</h1>
+                <h4>{date}</h4>
+            </TitleContainer>
             <PostContentsWrapper>
                 <BlogPostContentsContainer isShowContents={isShowContents}>
-                    <TitleContainer>
-                        <h1>{title}</h1>
-                        <h4>{date}</h4>
-                    </TitleContainer>
                     <Content
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
