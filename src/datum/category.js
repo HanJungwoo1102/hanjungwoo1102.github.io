@@ -42,7 +42,8 @@ const getAllPostIdsOfCategoryNode = (CategoryNode) => {
 const CATEGORY = createCategoryNode('Category');
 const FRONT = createCategoryNode('Front');
 const WEB = createCategoryNode('Web');
-const GATSBY_BLOG = createCategoryNode('Gatsby Blog', [1])
+const GATSBY_BLOG = createCategoryNode('Gatsby Blog', [1, 2])
+const CHILD_WEB = createCategoryNode('WEB', [3]);
 const ALGORITHM = createCategoryNode('Algorithm');
 const PERSONAL = createCategoryNode('Personal');
 
@@ -55,6 +56,7 @@ FRONT.children.push(WEB);
 
 // 2 depth
 WEB.children.push(GATSBY_BLOG);
+WEB.children.push(CHILD_WEB);
 
 // exports
 exports.getCategoryNodeByPostId = getCategoryNodeByPostId;
