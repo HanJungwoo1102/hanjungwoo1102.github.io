@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HanJungwoo]]></title><description><![CDATA[Han Jungwoo Blog]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Apr 2020 08:00:43 GMT</lastBuildDate><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (1)]]></title><description><![CDATA[…]]></description><link>https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</guid><pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HanJungwoo]]></title><description><![CDATA[Han Jungwoo Blog]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 09 Apr 2020 03:25:03 GMT</lastBuildDate><item><title><![CDATA[나만의 HTML, CSS convention]]></title><description><![CDATA[CSS Convention padding-left, padding-right vs margin-left, margin-right 기본은 padding 줄 때는 부모와 자식사이의 공간이고 margin…]]></description><link>https://hanjungwoo1102.github.io/3-make-blog-by-gatsby-3/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/3-make-blog-by-gatsby-3/</guid><pubDate>Thu, 09 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;css-convention&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#css-convention&quot; aria-label=&quot;css convention permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSS Convention&lt;/h1&gt;
+&lt;h2 id=&quot;padding-left-padding-right-vs-margin-left-margin-right&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#padding-left-padding-right-vs-margin-left-margin-right&quot; aria-label=&quot;padding left padding right vs margin left margin right permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;padding-left, padding-right vs margin-left, margin-right&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본은 padding 줄 때는 부모와 자식사이의 공간이고 margin 은 형제끼리의 공간을 위해 쓴다.&lt;/li&gt;
+&lt;li&gt;문제가 되는 여러 상황이 있었다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;부모와 자식들 사이의 공간이 자식들마다 다른경우&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;공간의 크기가 겹치는 경우가 많다면 하나의 부모로 묶어서 처리&lt;/li&gt;
+&lt;li&gt;공간의 크기가 자식들마다 너무 다르다면 최소 공간으로 패딩을 잡고 각 자식들마다 또 패딩을 주는 방식으로 하겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;padding-top-bottom-vs-margin-top-bottom&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#padding-top-bottom-vs-margin-top-bottom&quot; aria-label=&quot;padding top bottom vs margin top bottom permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;padding-(top, bottom) vs margin-(top, bottom)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본은 border 이 있는 경우 padding, 그 외는 margin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;margin-top-vs-margin-bottom&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#margin-top-vs-margin-bottom&quot; aria-label=&quot;margin top vs margin bottom permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;margin top vs margin bottom&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;margin top 쓰자 : 인접 형제 선택자(+)는 동생만 선택되기 때문에 중간에 다른 요소가 들어가는 경우 그 바로 동생의 margin top 을 취소하기 용이&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;요소의-크기-지정하는-경우width-height&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9A%94%EC%86%8C%EC%9D%98-%ED%81%AC%EA%B8%B0-%EC%A7%80%EC%A0%95%ED%95%98%EB%8A%94-%EA%B2%BD%EC%9A%B0width-height&quot; aria-label=&quot;요소의 크기 지정하는 경우width height permalink&quot; class=&quot;markdown-header-auto-link before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;요소의 크기 지정하는 경우(width, height)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;원래 요소의 크기&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;inline : 컨텐츠의 크기에 따라 width, height 지정됨&lt;/li&gt;
+&lt;li&gt;block : width 는 100%, height 은 안에 컨텐츠에 따라서 정해짐&lt;/li&gt;
+&lt;li&gt;inline-block: 컨텐츠의 크기에 따라 정해짐 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;요소의 크기를 정하는 경우는 반응형 웹에서는 특히 더 주의 해야 한다.&lt;/li&gt;
+&lt;li&gt;height 은 안의 자식들의 크기가 정적일 경우에만 지정해야한다.&lt;/li&gt;
+&lt;li&gt;width 는 가로로 배치하는 경우와 너비가 정해진 경우에 주로 지정하는 것 같다.&lt;/li&gt;
+&lt;li&gt;width 를 지정하는 경우는 가로로 배치되는 레이아웃 지정하는 경우가 많은것 같다. 항상 %로 비율로 먹이자.&lt;/li&gt;
+&lt;li&gt;가로로 배치 되지만 width 를 먹이지 않는 경우도 있다. 요소의 너비가 가변적이어야 하는 경우다.&lt;/li&gt;
+&lt;li&gt;가로 배치에 경우 항상 width 생각하자&lt;/li&gt;
+&lt;li&gt;고정된 너비 안에 유동적인 크기를 갖는 컨텐츠가 있을 경우는 항상 지원하는 화면 너비들을 다 확인 해 봐야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+  }
+  
+  .grvsc-code {
+    display: inline-block;
+    min-width: 100%;
+  }
+  
+  .grvsc-line {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-line-highlighted {
+    background-color: var(--grvsc-line-highlighted-background-color, transparent);
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, transparent);
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Gatsby 로 개인 blog 만들기 (1)]]></title><description><![CDATA[…]]></description><link>https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/1-make-blog-by-gatsby-1/</guid><pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 730px;&quot;
     &gt;
