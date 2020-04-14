@@ -55,11 +55,11 @@ export default () => {
 
     useEffect(() => {
         const anchorElements = document.getElementsByClassName('markdown-header-auto-link');
+        console.log(anchorElements);
         if (anchorElements) {
             setAnchors(filterAnchorDetails(anchorElements));
         }
     }, []);
-
     return (
         <AnchorContainer>
             {getAnchorItems(anchors)}

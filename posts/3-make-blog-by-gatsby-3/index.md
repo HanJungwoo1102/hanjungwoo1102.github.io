@@ -7,7 +7,7 @@ tags: ["sfdsdf"]
 
 # CSS Convention
 
-## padding-left, padding-right vs margin-left, margin-right
+## 1. padding-left, padding-right vs margin-left, margin-right
 
 - 기본은 padding 줄 때는 부모와 자식사이의 공간이고 margin 은 형제끼리의 공간을 위해 쓴다.
 - 문제가 되는 여러 상황이 있었다.

@@ -36,13 +36,13 @@ module.exports = {
                         resolve: 'gatsby-remark-images',    // margin down 내 image 넣기 위해 추가
                         options: {
                             maxWidth: 730,
-                        }
+                        },
                     },
                     {
                         resolve: 'gatsby-remark-autolink-headers',
                         options: {
                             className: 'markdown-header-auto-link',
-                        }
+                        },
                     },
                     {
                         resolve: `gatsby-remark-vscode`,
