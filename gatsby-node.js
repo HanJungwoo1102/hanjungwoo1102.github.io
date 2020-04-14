@@ -1,6 +1,6 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const { PageCreator } = require('./src/lib/create-page.js');
+const { PageCreator, createTagMap } = require('./src/lib/create-page.js');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions;
@@ -53,6 +53,48 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             name: `slug`,
             node,
             value,
-        })
+        });
     }
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions;
+    const typeDefs = `
+        type Tag {
+            name: String!
+            postIds: [Int!]!
+        }
+    `;
+
+    createTypes(typeDefs);
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+    const resolvers = {
+        Query: {
+            allTags: {
+                type: "[Tag!]!",
+                resolve(source, args, context, info) {
+                    const posts = context.nodeModel.getAllNodes({ type: 'MarkdownRemark' }).map((node) => {
+                        const { id, tags } = node.frontmatter;
+                        return {
+                            id,
+                            tags,
+                        };
+                    });
+
+                    const tagMap = createTagMap(posts);
+
+                    return Object.entries(tagMap).map(([tagName, postIdsInTag]) => {
+                        return {
+                            name: tagName,
+                            postIds: postIdsInTag,
+                        };
+                    });
+                },
+            },
+        },
+    };
+
+    createResolvers(resolvers);
 };

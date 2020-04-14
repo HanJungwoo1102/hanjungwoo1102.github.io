@@ -1,4 +1,4 @@
-export const DEFAULT_POST = '/default-post-image.png';
+export const DEFAULT_POST = '/hanjws.jpg';
 
 export const PROFILE = '/hjwBlue.png';
 

@@ -10,14 +10,18 @@ const PageCreator = (createPage, posts) => {
             const postsTemplateComponent = path.resolve(`src/templates/posts.js`);
         
             posts.forEach((post) => {
-                const postId = post.id;
-                const relatedPostIds = getRelatedPostIds(postId);
+                const { id, tags } = post;
+                let relatedPostIds = [];
+
+                if (tags && tags.length > 0) {
+                    relatedPostIds = tagMap[tags[0]];
+                }
         
                 createPage({
-                    path: getPathOfPost(postId),
+                    path: getPathOfPost(id),
                     component: postsTemplateComponent,
                     context: {
-                        postId,
+                        postId: id,
                         relatedPostIds,
                     }, // additional data can be passed via context
                 });
@@ -65,18 +69,6 @@ const PageCreator = (createPage, posts) => {
     }
 }
 
-const getRelatedPostIds = (postId) => {
-    const relatedIds = [];
-
-    const categoryNodeOfPost = getCategoryNodeByPostId(CATEGORY, postId);
-
-    if (categoryNodeOfPost) {
-        relatedIds.push(...getAllPostIdsOfCategoryNode(categoryNodeOfPost));
-    }
-
-    return relatedIds;
-};
-
 const createTagMap = (posts) => {
     const result = {}
 
@@ -97,3 +89,4 @@ const createTagMap = (posts) => {
 }
 
 exports.PageCreator = PageCreator;
+exports.createTagMap = createTagMap;

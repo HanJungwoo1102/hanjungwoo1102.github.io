@@ -3,7 +3,7 @@ id: 2
 title: "Gatsby 로 개인 blog 만들기 (2) - setting and deploy"
 date: "2020-04-03"
 image: ./gatsby.jpeg
-tags: ["2", "bbb", "1"]
+tags: ["Gatsby Blog", "2", "bbb", "1"]
 ---
 
 # 준비

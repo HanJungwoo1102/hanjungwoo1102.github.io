@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { getPathOfCategory } from '../../../../lib/path';
+import { getPathOfTag } from '../../../../lib/path';
 
 import styled from 'styled-components';
 
@@ -14,12 +14,19 @@ const ChildrenCategoryNodeContainer = styled.div`
     padding: 3px 0 0 15px;
 `;
 
-export default ({ name, children }) => {
+export default ({ name, count, children }) => {
     return (
         <CategoryNode>
-            <Link to={getPathOfCategory(name)}>
-                - {name}
-            </Link>
+            {
+                count && count > 0 ?
+                    <Link to={getPathOfTag(name)}>
+                        - {name} {count && `(${count})`}
+                    </Link>
+                :
+                    <div>
+                        - {name}
+                    </div>
+            }
             <ChildrenCategoryNodeContainer>
                 { children }
             </ChildrenCategoryNodeContainer>

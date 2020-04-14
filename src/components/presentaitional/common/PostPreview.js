@@ -15,6 +15,7 @@ const PostPreviewImage = styled.div`
     width: 100%;
     padding-top: 65%;
     background-size: 100% 100%;
+    border-radius: 4px;
 
     ${
         props => props.backgroundImage &&

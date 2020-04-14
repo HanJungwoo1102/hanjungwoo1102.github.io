@@ -6,6 +6,10 @@ import { CategoryContentsWrapper } from '../../../styled/CenteredContentsWrapper
 
 import { conditionOfMediaQuery } from '../../../../constants/style/size';
 
+const PostContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
 
 const PostWrapper = styled.div`
     width: 100%;
@@ -20,22 +24,24 @@ const PostWrapper = styled.div`
 export default ({ posts }) => {
     return (
         <CategoryContentsWrapper>
-            {
-                posts.map((post) => {
-                    return (
-                        <PostWrapper>
-                            <PostPreview
-                                id={post.id}
-                                title={post.title}
-                                date={post.date}
-                                description={post.description}
-                                key={post.id}
-                                image={post.image}
-                            />
-                        </PostWrapper>
-                    );
-                })
-            }
+            <PostContainer>
+                {
+                    posts.map((post) => {
+                        return (
+                            <PostWrapper>
+                                <PostPreview
+                                    id={post.id}
+                                    title={post.title}
+                                    date={post.date}
+                                    description={post.description}
+                                    key={post.id}
+                                    image={post.image}
+                                />
+                            </PostWrapper>
+                        );
+                    })
+                }
+            </PostContainer>
         </CategoryContentsWrapper>
     );
 };
