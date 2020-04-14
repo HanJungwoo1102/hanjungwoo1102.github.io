@@ -1,62 +1,6 @@
-const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { CATEGORY, getCategoryNodeByPostId, getAllPostIdsOfCategoryNode } = require('./src/datum/category');
-const { getPathOfPost, getPathOfCategory } = require('./src/lib/path');
 
-const getRelatedPostIds = (postId) => {
-    const relatedIds = [];
-
-    const categoryNodeOfPost = getCategoryNodeByPostId(CATEGORY, postId);
-
-    if (categoryNodeOfPost) {
-        relatedIds.push(...getAllPostIdsOfCategoryNode(categoryNodeOfPost));
-    }
-
-    return relatedIds;
-};
-
-const createPageOfPost = (createPage) => (edges) => {
-    const postsTemplateComponent = path.resolve(`src/templates/posts.js`);
-
-    edges.forEach(({ node }) => {
-        const postId = node.frontmatter.id;
-        const relatedPostIds = getRelatedPostIds(postId);
-
-        createPage({
-            path: getPathOfPost(postId),
-            component: postsTemplateComponent,
-            context: {
-                postId,
-                relatedPostIds,
-            }, // additional data can be passed via context
-        });
-    });
-}
-
-const createPageOfCategory = (createPage) => (categoryNode) => {
-    const categoriesTemplateComponent = path.resolve(`src/templates/categories.js`);
-    
-    const createPageOfCategoryNode = (categoryNode) => {
-        const name = categoryNode.name;
-        const postIds = getAllPostIdsOfCategoryNode(categoryNode);
-
-        createPage({
-            path: getPathOfCategory(categoryNode.name),
-            component: categoriesTemplateComponent,
-            context: {
-                name,
-                postIds,
-            },
-        });
-
-        categoryNode.children.forEach((childCategoryNode) => {
-            createPageOfCategoryNode(childCategoryNode);
-        });
-    };
-
-    createPageOfCategoryNode(categoryNode);
-
-}
+const { PageCreator } = require('./src/lib/create-page.js');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions;
@@ -71,6 +15,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     node {
                         frontmatter {
                             id
+                            tags
                         }
                     }
                 }
@@ -84,9 +29,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         return
     }
 
-    createPageOfPost(createPage)(result.data.allMarkdownRemark.edges);
+    const posts = result.data.allMarkdownRemark.edges.map((edge) => {
+        const { id, tags } = edge.node.frontmatter;
+        return {
+            id,
+            tags,
+        };
+    });
 
-    createPageOfCategory(createPage)(CATEGORY);
+    const pageCreator = PageCreator(createPage, posts);
+
+    pageCreator.createPageOfPost();
+    pageCreator.createPageOfCategory();
+    pageCreator.createPageOfTag();
+
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -99,4 +55,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             value,
         })
     }
-}
+};
