@@ -20,5 +20,18 @@ module.exports = {
       options: {
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/posts`,
+        name: `markdown-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`, // source 뒤에 와야한다는디??
+      options: {
+        plugins: [`gatsby-remark-prismjs`,]
+      }
+    },
   ],
 }

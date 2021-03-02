@@ -1,0 +1,62 @@
+@import '../../../style/markdown.scss';
+@import '../../../style/media-query.scss';
+
+.post-page-comp {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+
+  > .main-image-container {
+    height: 200px;
+
+    @include desktop-style {
+      height: 300px;
+    }
+
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    > .cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.3);
+
+      > .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        > .title {
+          color: #ffffff;
+          text-align: center;
+        }
+
+        > .date {
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  > .contents-container {
+    padding: 20px 16px;
+
+    > .description {
+
+    }
+  }
+
+}
