@@ -44,6 +44,7 @@ const HomePage: FunctionComponent<Props> = ({
                 />
                 <div className="description-container">
                   <p className="date">{post.dateString}</p>
+                  <p className="title">{post.title}</p>
                   <p className="post-theme-container">
                     {
                       post.postThemeNames.map((name) => (
@@ -51,7 +52,6 @@ const HomePage: FunctionComponent<Props> = ({
                       ))
                     }
                   </p>
-                  <p className="title">{post.title}</p>
                   <p className="description">{post.description}</p>
                 </div>
               </div>
