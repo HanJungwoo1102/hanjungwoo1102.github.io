@@ -33,5 +33,6 @@ module.exports = {
         plugins: [`gatsby-remark-prismjs`,]
       }
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }
