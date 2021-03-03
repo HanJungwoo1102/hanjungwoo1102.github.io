@@ -1,4 +1,4 @@
-import { PageProps } from "gatsby";
+import { navigate, PageProps } from "gatsby";
 import React, { FunctionComponent } from "react";
 
 import HomePage from '../view/component/page/HomePage';
@@ -9,7 +9,7 @@ const Home: FunctionComponent<PageProps> = ({ pageContext }) => {
   const onClickPost = ({ id }: {
     id: number;
   }) => {
-
+    navigate(`/posts/${id}`);
   };
 
   return (

@@ -1,9 +1,24 @@
 .markdown-style {
+  $LINK_COLOR: #212121;
+  $LINK_HOVER_BACKGROUND_COLOR: #4765FF;
+
   > * {
-    margin: 20px 0;
+    margin-bottom: 15px;
+  }
+
+  > h1, h2, h3, h4, h5, h6 {
+    margin-top: 65px;
+    margin-bottom: 15px;
   }
 
   ul, ol {
     padding-left: 20px;
   }
+
+  pre {
+    font-size: 14px;
+  }
+
+  a {color: $LINK_COLOR; text-decoration: underline; outline: none}
+  a:hover, a:active {color: #ffffff; text-decoration: underline; background-color:$LINK_HOVER_BACKGROUND_COLOR;}
 }

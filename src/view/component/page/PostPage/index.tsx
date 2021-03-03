@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { FunctionComponent } from 'react';
 
 import './index.scss';
@@ -38,6 +39,13 @@ const PostPage: FunctionComponent<Props> = ({
         >
 
         </div>
+      </div>
+      <div className="home-button">
+        <Link
+          to={'/'}
+        >
+          Han Jungwoo
+        </Link>
       </div>
     </div>
   );

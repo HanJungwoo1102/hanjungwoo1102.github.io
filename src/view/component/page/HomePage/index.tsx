@@ -12,6 +12,8 @@ interface Post {
   title: string;
   dateString: string;
   mainImageUrl: string;
+  description: string;
+  postThemeNames: string[];
 }
 
 const HomePage: FunctionComponent<Props> = ({
@@ -20,6 +22,10 @@ const HomePage: FunctionComponent<Props> = ({
   return (
     <div className="home-page-comp">
       <h1 className="title">Han Jungwoo</h1>
+
+      <div className="greeting">
+        hello
+      </div>
 
       <div className="post-container">
         {
@@ -37,8 +43,16 @@ const HomePage: FunctionComponent<Props> = ({
                   }}
                 />
                 <div className="description-container">
-                  <p>{post.dateString}</p>
-                  <p>{post.title}</p>
+                  <p className="date">{post.dateString}</p>
+                  <p className="post-theme-container">
+                    {
+                      post.postThemeNames.map((name) => (
+                        <span key={name}>{name}</span>
+                      ))
+                    }
+                  </p>
+                  <p className="title">{post.title}</p>
+                  <p className="description">{post.description}</p>
                 </div>
               </div>
             </div>

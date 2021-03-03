@@ -46,6 +46,7 @@
         > .date {
           color: #ffffff;
           text-align: center;
+          font-size: 14px;
         }
       }
     }
@@ -59,4 +60,18 @@
     }
   }
 
+  > .home-button {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    
+    > a {
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
