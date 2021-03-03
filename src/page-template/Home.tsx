@@ -1,5 +1,6 @@
 import { navigate, PageProps } from "gatsby";
 import React, { FunctionComponent } from "react";
+import Head from "../lib/Head";
 
 import HomePage from '../view/component/page/HomePage';
 
@@ -13,10 +14,16 @@ const Home: FunctionComponent<PageProps> = ({ pageContext }) => {
   };
 
   return (
+    <>
+    <Head
+      title="Home"
+      description="Han Jungwoo Blog"
+    />
     <HomePage
       posts={posts}
       onClickPost={onClickPost}
     />
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import PostCard from '../../card/PostCard';
 
 import './index.scss';
 
@@ -35,26 +36,13 @@ const HomePage: FunctionComponent<Props> = ({
               key={post.id}
               onClick={() => onClickPost(post)}
             >
-              <div className="post">
-                <div
-                  className="main-image-container"
-                  style={{
-                    backgroundImage: `url(${post.mainImageUrl})`
-                  }}
-                />
-                <div className="description-container">
-                  <p className="date">{post.dateString}</p>
-                  <p className="title">{post.title}</p>
-                  <p className="post-theme-container">
-                    {
-                      post.postThemeNames.map((name) => (
-                        <span key={name}>{name}</span>
-                      ))
-                    }
-                  </p>
-                  <p className="description">{post.description}</p>
-                </div>
-              </div>
+              <PostCard
+                title={post.title}
+                dateString={post.dateString}
+                postThemeNames={post.postThemeNames}
+                description={post.description}
+                mainImageUrl={post.mainImageUrl}
+              />
             </div>
           ))
         }
