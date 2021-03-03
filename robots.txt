@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hanjungwoo1102.github.io/sitemap.xml
-Host: https://hanjungwoo1102.github.io
