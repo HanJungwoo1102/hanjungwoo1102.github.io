@@ -5,7 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    siteUrl: 'https://hanjungwoo1102.github.io',
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
@@ -34,5 +36,8 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-feed',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
   ],
 }
