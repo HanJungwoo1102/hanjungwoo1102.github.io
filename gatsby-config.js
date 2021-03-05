@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+ const host = 'https://hanjungwoo1102.github.io';
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://hanjungwoo1102.github.io',
@@ -38,6 +40,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-feed',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+          host: `https://${host}`,
+          sitemap: `https://${host}/sitemap.xml`,
+          policy: [{ userAgent: '*', allow: '/' }],
+      }
+    },
   ],
 }
