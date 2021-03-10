@@ -19,6 +19,16 @@
     font-size: 14px;
   }
 
+  blockquote {
+    background-color: #f0f0f0;
+    padding: 20px 16px;
+    border-left: 4px solid #4765FF;
+  }
+
+  hr {
+    margin-top: 65px;
+  }
+
   a {color: $LINK_COLOR; text-decoration: underline; outline: none}
   a:hover, a:active {color: #ffffff; text-decoration: underline; background-color:$LINK_HOVER_BACKGROUND_COLOR;}
 }
