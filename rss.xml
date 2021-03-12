@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[Your Site's RSS Feed]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Mar 2021 09:44:30 GMT</lastBuildDate><item><title><![CDATA[프로그래밍 언어]]></title><description><![CDATA[프로그래밍 언어 2021년 1학기 프로그래밍 언어 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다. 너무나도 어렵게 다가온 수업이었다. 영어 듣기도 어렵고 설명도 어려워서 이해가 잘 되지 않아서 고생을 많이 하고있다.…]]></description><link>https://hanjungwoo1102.github.io/posts/3</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/posts/3</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;프로그래밍 언어&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[Your Site's RSS Feed]]></description><link>https://hanjungwoo1102.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Mar 2021 09:46:01 GMT</lastBuildDate><item><title><![CDATA[선형대수학]]></title><description><![CDATA[선형대수학 1. Linear Equations in Linear Algebra linear eqaution solution 종류 no solution (inconsistent) exactly one solution (consistent…]]></description><link>https://hanjungwoo1102.github.io/posts/5</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/posts/5</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;선형대수학&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2&gt;1. Linear Equations in Linear Algebra&lt;/h2&gt;
+&lt;p&gt;linear eqaution&lt;/p&gt;
+&lt;p&gt;solution 종류&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no solution (inconsistent)&lt;/li&gt;
+&lt;li&gt;exactly one solution (consistent)&lt;/li&gt;
+&lt;li&gt;infinitely many solutions (consistent)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;coefficient matrix: 행렬로 linear system 의 필수 정보를 기록할 수 있다. (coefficient: 계수)&lt;/p&gt;
+&lt;p&gt;row count x column count&lt;/p&gt;
+&lt;p&gt;argumented matrix: coefficient matrix 에서 식의 오른쪽 상수 추가한 것&lt;/p&gt;
+&lt;p&gt;nonzero row: row 중에 0 없을 때&lt;/p&gt;
+&lt;p&gt;leading entry: nonzero row 에서 가장 왼쪽에 있는 0 이 아닌 애&lt;/p&gt;
+&lt;p&gt;직사각행렬(rectangular matrix)은 다음 세 정질을 가질 때 사다리꼴(echelon form) 또는 행사다리꼴(row echelon form)이라 한다&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;0이 아닌 모든 행은 성분이 모두 0인 행들 위에 항상 놓여 있다.&lt;/li&gt;
+&lt;li&gt;각 행의 선행성분들은 그 행보다 위에 있는 행의 선행성분보다 오른쪽에 있는 열에 있다.&lt;/li&gt;
+&lt;li&gt;선행성분 밑의 열의 성분들은 모두 영(0)이다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;만약 사다리꼴 행렬이 다음 추가 조건을 만족한다면 기약사다리꼴(감소된 사다리꼴 reduced echelon form) 또는 기약행사다리꼴(감소된 행 사다리꼴 reduced row echelon form)이라 한다:&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;영(0)이 아닌 행의 선행성분은 1이다.&lt;/li&gt;
+&lt;li&gt;각 선행성분 1은 그 열 안에서 영(0)이 아닌 유일한 성분이다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;기약사다리꼴의 유일성 정리:
+각 행렬은 오직 하나의 기약 행사다리꼴 행렬과 행동치이다.&lt;/p&gt;
+&lt;img src=&quot;/images/5-1.png&quot; width=&quot;50%&quot; &gt;
+&lt;p&gt;pivot position, pivot column&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;중쇠(추축)의 정의: 행렬 A의 추축 위치(pivot  position)는 행렬 A의 기약사다리꼴에서 선행성분 1에 해당하는, 행렬 A 내의 위치이다. 추축열(pivot column)은 추축(중쇠) 위치를 포함하는 A의 열을 말한다. 추축(pivot)은 추축위치에 있는 0이 아닌 수로서 행연산시 0을 만드는 데 쓰인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;2.&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[프로그래밍 언어]]></title><description><![CDATA[프로그래밍 언어 2021년 1학기 프로그래밍 언어 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다. 너무나도 어렵게 다가온 수업이었다. 영어 듣기도 어렵고 설명도 어려워서 이해가 잘 되지 않아서 고생을 많이 하고있다.…]]></description><link>https://hanjungwoo1102.github.io/posts/3</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/posts/3</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;프로그래밍 언어&lt;/h1&gt;
 &lt;p&gt;2021년 1학기 프로그래밍 언어 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다. 너무나도 어렵게 다가온 수업이었다. 영어 듣기도 어렵고 설명도 어려워서 이해가 잘 되지 않아서 고생을 많이 하고있다.&lt;/p&gt;
 &lt;h2&gt;1. Introduction to Programming Languages and Issues&lt;/h2&gt;
 &lt;p&gt;좋은 언어의 특징&lt;/p&gt;
@@ -129,9 +163,7 @@
 &lt;h3&gt;Client-Server Paradigm&lt;/h3&gt;
 &lt;h3&gt;Standard Client-Server Applications&lt;/h3&gt;
 &lt;h3&gt;Peer-To-Peer Paradigm&lt;/h3&gt;
-&lt;h3&gt;Socket-Interface Programming&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[선형대수학]]></title><description><![CDATA[선형대수학 1. Linear Equations in Linear Algebra 2.]]></description><link>https://hanjungwoo1102.github.io/posts/5</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/posts/5</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;선형대수학&lt;/h1&gt;
-&lt;h2&gt;1. Linear Equations in Linear Algebra&lt;/h2&gt;
-&lt;h2&gt;2.&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조 개론]]></title><description><![CDATA[컴퓨터 구조 개론 2021년 1학기 컴퓨터 구조 개론 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다. 1. Introduction 컴퓨터 구조에 대해서 배운다.
+&lt;h3&gt;Socket-Interface Programming&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조 개론]]></title><description><![CDATA[컴퓨터 구조 개론 2021년 1학기 컴퓨터 구조 개론 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다. 1. Introduction 컴퓨터 구조에 대해서 배운다.
 이 수업을 듣고 회로에 대해서 조금 안다면 간단한 cpu…]]></description><link>https://hanjungwoo1102.github.io/posts/6</link><guid isPermaLink="false">https://hanjungwoo1102.github.io/posts/6</guid><pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;컴퓨터 구조 개론&lt;/h1&gt;
 &lt;p&gt;2021년 1학기 컴퓨터 구조 개론 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다.&lt;/p&gt;
 &lt;h2&gt;1. Introduction&lt;/h2&gt;
